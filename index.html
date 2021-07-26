@@ -3,17 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark Hill | Portfolio</title>
+    <!-- Keep maximum-scale part? -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> 
+    
+    <!-- Links to style sheets -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Home | Jeff Hill CPA</title>
 </head>
 <body>
-    <article>
-        <h1>Mark Hill</h1>
-        <p>I'm clearly still making this!</p>
-        
-        <a href="https://github.com/Mark-David-Hill"><img src="images/GitHub-Mark-32px.png" alt="GitHub Logo"></a>
+    <!--  -->
+    <!-- Header/Navigation Bar -->
+    <!--  -->
 
-        <a href="https://app.pluralsight.com/profile/mark-hill-37"><img src="https://user-images.githubusercontent.com/4683221/34775011-89bb46c2-f609-11e7-8bd1-d7a70d2277fd.jpg" alt="PluralSight" width="40px"></a>
-    </article>
+
+    <div class="navigation-container clearfix">
+        <!-- Logo -->
+        <header class="clearfix">
+            <div class="row limited">
+                <section class="column small-12 medium-6">
+                    <img src="images/cropped-logo.png" alt="Jeff Hill CPA LLC">
+                </section>
+            </div> <!-- end of row -->
+        </header>
+    
+        <!-- Nav Bar -->
+        <nav class="clearfix">
+            <div class="row limited">
+                <button id="hamburgerBtn">&#9776;</button>
+                <ul id="primaryNav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div> <!-- end of row -->
+        </nav>
+    </div><!-- End of Header/Navigation Bar -->
+    
+    
+
+    <main class="clearfix">
+        <!-- Remove class "limited" to make sure hero image extends to edges of screen, even if it needs to be stretched. -->
+        <div class="row">
+            <!-- This section can be added for a different style (image doesn't touch edge of the screen) -->
+            <!-- <section class="column small-12"> -->
+                <img class="hero" src="images/hero.jpg" alt="Bethany Hero Image" width="1140" height="561">
+            <!-- </section> -->
+        </div> <!-- end row-->
+        
+        <div class="row limited">
+            <section class="column small-12">
+                <h1>Jeff Hill CPA, LLC</h1>
+            </section>
+        </div> <!-- end row-->
+
+        <div class="row limited">
+            <section class="column small-12">
+                <h2>Professional Tax services</h2>
+            </section>
+        </div> <!-- end row-->
+
+        <!-- Video -->
+        <div class="row limited">
+            <section class="column small-12 medium-6">
+                <p>Hi, I'm Jeff Hill. I have over 30 years of experience providing professional accounting services to individuals and businesses.</p><p>We are located in the Bountiful, Utah area and provide a variety of services.</p>
+                <p>If you think we may be able to help you with your accounting needs, contact us today, and we'll see how we can help.</p>
+                <div class="center-me standard-button full-width">
+                    <a href="/contact.html"><button class="full-width">Contact Us</button></a>
+                </div>
+            </section>
+            <section class="column small-12 medium-6">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Cnf_6NmCYKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        </div> <!-- end row-->
+
+        <div class="row limited">
+            <section class="column small-12">
+                
+            </section>
+        </div> <!-- end row-->
+
+
+
+        <div class="row limited">
+            <section class="column small-12">
+                <!-- For Individuals -->
+                <hr>
+                <img class="text-wrap" src="images/for-individuals.jpeg" alt="individual services">
+                <h3 class="primary-color">For Individuals</h3>
+                <p>Need help with your personal finances or taxes? We help individuals navigate areas such as financial planning, estate planning, and elder care.</p>
+                <br>
+                <hr>
+                
+                <!-- For Businesses -->
+                <img class="text-wrap" src="images/for-businesses.jpeg" alt="individual services">
+                <h3 class="primary-color">For Businesses</h3>
+                <p>We provide a wide variety of services for businesses, such as small business accounting, payroll, bank financing, succession planning, new business formation, litigation support, and more.</p>
+                <br>
+                <hr>
+
+                <!-- Tax Services -->
+                <img class="text-wrap" src="images/tax-services.jpeg" alt="individual services">
+                <h3 class="primary-color">Tax Services</h3>
+                <p>We can help you through the process of preparing and planning taxes, and can help you deal with any tax problems you may encounter along the way.</p>
+                <br>
+                <hr>
+
+                <!-- Quickbook Services -->
+                <img class="text-wrap" src="images/quickbook-services.jpeg" alt="individual services">
+                <h3 class="primary-color">Quickbook Services</h3>
+                <p>Quickbooks can be a powerful piece of software when preparing your taxes, and we can provide you with the help you need to get the most out of it.</p>
+                <br>
+                <hr>
+                
+                
+                
+                <div class="center-me standard-button">
+                    <a href="/services.html">
+                        <button>Learn More</button></div>
+                    </a>
+                
+
+
+            </section> <!-- end of column -->
+        </div> <!-- end of row-->
+
+        
+
+    </main>
+
+    <!--  -->
+    <!-- Footer -->
+    <!--  -->
+    <footer class="clearfix">        
+            <!-- small-12 means on a small screen this section will take up 12/12 columns (100%), medium-6 for 6/12 (50%), and large-3 for 3/12 (25%) -->
+            
+            <section class="column small-12 medium-3">
+                <h2>Jeff Hill CPA, LLC<br>415 South Medical Drive, Suite C102 <br>Bountiful, UT 84010</h2>
+            </section>
+            <section class="column small-12 medium-3">
+                <h2><a href="tel:+18012985555">Work Phone: (801)298-5555</a><br><a href="tel:+18015570803">Cell Phone: (801)-557-0803</a><br><br><a href="mailto:jeff@jeffhillcpa.com">E-mail: jeff@jeffhillcpa.com</a></h2>
+                <h2></h2>
+            </section>
+            
+            <section class="column small-12 medium-3">
+
+                <a href="https://www.privacypolicies.com/live/0370365e-9eb1-4cb9-a3c5-73b9bc8c947b"><h2>Privacy Policy</h2></a>
+
+                <h2>Copyright © 2021, Jeff Hill CPA LLC. All Rights Reserved.</h2>
+
+                
+            </section>
+
+            <section class="column small-12 medium-3">
+                
+            </section>
+
+            <!-- Certifications -->
+        <section class="column small-12 medium-3 certifications">
+            <img id="aicpa-logo" src="images/certifications/cpa-ko.png" alt="AICPA Logo" width="140px" height="55px">
+
+            <img class="large-only" id="proadvisor-logo-large" src="images/certifications/ProAdvisor.png" alt="ProAdvisor Logo" width="70px" height="110px">
+            <br class="no-large">
+
+            <br>
+
+            <img class="no-large" id="proadvisor-logo" src="images/certifications/ProAdvisor.png" alt="ProAdvisor Logo" width="70px" height="110px">
+            <br class="no-large">
+            
+            
+            
+        </section> <!-- end of column -->
+        <section class="column small-4">
+        </div> <!-- end of the row -->
+    </footer> <!-- End of Footer -->
+
+    <!-- Menu Toggle Script -->
+    <script src="js/menuToggle.js"></script>
 </body>
 </html>

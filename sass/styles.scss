@@ -1,0 +1,16 @@
+// List partials to import. I believe the order is important.
+@import "normalize";
+
+@import "variables";
+
+@import "small";
+
+/* Smallest screen we deal with is 320px. 768px is about the width of a phone screen turned sideways. */
+@media only screen and (min-width: 768px) {
+    @import "medium";
+} /* end of media query */
+
+/* Common for large size- 1200px or 1024px */
+@media only screen and (min-width: 1200px) {
+    @import "large";
+} /* end of media query */

@@ -1,0 +1,382 @@
+// Magical code that removed the white bar from showing up on the right side of the screen on smaller screen sizes. Seems to be the "overflow-x: hidden;" that did it.
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/* 12 column grid system is a good setup */
+
+/* Guideline for images: set the width and height in HTML as a ratio, then set the width in CSS to "100%" and the height to "auto" */
+
+/* prevents the text size in web kit and microsoft browsers from changing when phone orientation is changed. */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/* Makes sure all browsers implement the box-model in the same way. Makes sure padding is added to the inside of an element and margin to the outside. */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Set basic font-family/weight for the whole body */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /* Normal default font size. */
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.navigation-container a {
+    // position: absolute;
+    // top: 0;
+    // width: 100%;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+/* Stop the logo from being wider than the screen on smaller screens. */
+.navigation-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ///// */
+/* ///// grid rules */
+/* ///// */
+
+/* makes sure every row stays below the content above it */
+.row {clear: both;}
+/* Makes them act like columns. */
+
+/* Limits max width, centers content in container. */
+.limited {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.column{float: left; padding: 0 2vw; margin: 0 0 .75rem 0;}
+
+.small-12{width: 100%;}
+
+.small-4{width: 33.33333%;}
+
+
+/*  */
+/* header rules */
+/*  */
+header {
+    background-color: rgb(255, 255, 255);
+}
+header img {
+    float:left;
+    height: 85px;
+    padding-right: 10px;
+}
+header h1, header h2 {
+    margin: 0;
+    /* bold weight */
+    font-weight: 300;
+    font-style: italic;
+}
+header h1 {
+    padding: .5rem 0 0 0;
+    font-size: 1.95rem;
+}
+header h2 {
+    padding: .2rem 0 0 0;
+    font-size: 1.05rem;
+}
+
+
+main h1 {
+    color: $midColor;
+    font-style: italic;
+    margin: .5rem 0 .1rem 0;
+    font-size: 2.5rem;
+}
+
+
+.labeled {position: relative;}
+
+// Styling for cards
+.labeled h6 {
+    position: absolute;
+    background-color: rgba(255,255,255,.7);
+    margin: 0;
+    width: 100%;
+    padding: .3rem 1rem;   
+}
+.labeled h6 {
+    /* line up at the top */
+    top: 0;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.labeled p {
+    /* line up at the bottom */
+    bottom: 0;
+    font-weight: 700;
+    color: #b00;
+}
+
+
+
+
+
+#line-break {
+    background-color: blue;
+}
+
+
+footer {
+    color: white;
+    background-color: $primaryColor;
+    font-size: 0.8rem;
+    margin-top: 1.5em;
+}
+footer h2 {
+    // font-style: italic;
+    // text-transform: uppercase;
+    /* Note- no left/right margin here. */
+    margin: 1rem 0 .3rem 0;
+    text-align: center;
+}
+
+
+/* Inserts content after floated items and prevents the container from collapsing. */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+button#hamburgerBtn {
+    /* Removes the border and background of the button */
+    background: none;
+    border: none;
+
+    color: rgb(255, 255, 255);
+    font-size: 2.4rem;
+    cursor: pointer;
+    padding: 0 30px 0 2vw;
+}
+
+nav {background-color: $secondaryColor;}
+nav ul {margin: 0; padding: 0;}
+nav li {list-style-type: none;}
+// For the navigation buttons/links
+nav a {
+    display: block;
+    padding: .8rem 0;
+    color: #eee;
+    text-align: center;
+    text-decoration: none;
+}
+/* Shows where the user currently is on the nav bar (wayfinding). */
+nav li.active {
+    // Current page nav select color.
+    background-color: $primaryColor;
+}
+/* Darkens the button when hovered over. */
+nav a:hover {background-color: rgba(0,0,0,0.2);}
+/* Only if it has the open class, display the navigation items. */
+nav ul.open {display: block;}
+nav ul {display: none;}
+
+
+
+/* Photo by <a href="https://unsplash.com/@homajob?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Scott Graham</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+  
+// changed to .hero, broke card margins.
+main img {
+    /* Takes up the entire width of its container. */
+    width: 100%;
+    /* Keeps the image's original ratio (not stretched/squashed) */
+    height: auto;
+}
+
+// Images that should have text wrapped around them. Currently about page Portrait pic.
+.text-wrap {
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-right: 1.5em;
+    // border: red 10px solid;
+}
+
+.service {
+    margin-bottom: 2em;
+}
+
+.service img {
+    width: 500px;
+}
+
+iframe {
+    width: 100%;
+}
+
+.primary-color {color: $primaryColor;}
+
+hr {
+    margin: 1em 0 1em 0;
+}
+
+a {color: inherit;}
+
+.standard-button button {
+    padding: 1em;
+    color: white;
+    background-color: $primaryColor;
+    border: $secondaryColor solid 2px;
+    border-radius: 10px;
+}
+
+#phoneButton button {
+    // display: none;
+    // margin: 4.5em 0 2em 4em;
+    padding: 1em;
+    color: white;
+    background-color: $primaryColor;
+    border: $secondaryColor solid 2px;
+    border-radius: 10px;
+}
+
+// For iframe of google maps.
+// Example of doing it right:
+// https://www.kananicpa.com/contact
+.iframe-rwd {
+    position: relative;
+padding-bottom: 65.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+
+// Keeps google maps i-frame small enough to fit in mobile view.
+// https://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-weird-resizing
+.iframe-rwd iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.2em;
+}
+
+form input, form textarea {
+    width: 100%;
+}
+
+input[type="submit"] {
+    padding: 0.5em;
+    text-align: center;
+    border-style: none;
+    color: white;
+    background-color: $midColor;
+    font-size: 1.3em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+}
+
+.contact-info
+{
+    p {
+        font-size: 1em;
+        color: $primaryColor;
+    }
+}
+
+.center-me {
+    margin: auto;
+    width: 150px;
+}
+
+
+
+.certifications {
+    text-align: center;    
+}
+
+
+// 
+// Certification images /////////////////////
+// 
+#aicpa-logo {
+    width: 40%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+#proadvisor-logo {
+    width: 30%;
+    height: auto;
+}
+
+.large-only {
+    display: none;
+}
+
+// #jeff-hill-logo {
+//     width: 30%;
+//     height: auto;
+//     margin: 0 0 10px 20px;
+// }
+
+// end of certification images ///////////////
+
+.full-width {
+    width: 100%;
+}
+
+button {
+    font-size: 1.3em;
+}
+
+
+h2 {
+    font-size: 1.6em;
+    margin: 1em 0 0 0;
+}
+
+h3 {font-size: 1.4em;}
+
+.standard-button button:hover {
+    background-color: rgb(41, 90, 131);  
+}
+
+ul li a{
+    list-style: none;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: $primaryColor;
+}
+
+button a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.resources-image {margin-top: 1em;}
+
+.services li {
+    font-size: 1.1em;
+}
+
+// #wide-button {
+//     width: 300px;
+// }

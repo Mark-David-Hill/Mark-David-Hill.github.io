@@ -1,0 +1,26 @@
+/* Smallest screen we deal with is 320px. 768px is about the width of a phone screen turned sideways. */
+
+/* Increase size of header elements for medium size screens */
+header h1 {font-size: 2rem;}
+header h2 {font-size: 1.5rem;}
+header img {height: 100px;}
+
+.medium-3{width: 25%;}
+.medium-4{width: 33.3333333%;}
+.medium-5{width: 41.666666667%;}
+.medium-6 {width: 50%;}
+.medium-7{width: 58.333333333%;}
+.medium-8 {width: 66.6666667%;}
+.medium-12{width: 100%;}
+
+/* don't display the hamburger button if not phone-size. */
+nav button {display: none;}
+/* Make sure navigation displays */
+nav ul {display: block;}
+
+nav li {
+    /* Arrange items left to right. */
+    float: left;
+    /* 5 items, so 20% uses all the space. */
+    width: 20%;
+}
