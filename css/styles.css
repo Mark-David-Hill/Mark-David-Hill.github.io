@@ -305,6 +305,9 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  box-sizing: border-box; }
+
 html, body {
   width: 100%;
   height: 100%;
@@ -312,8 +315,17 @@ html, body {
   padding: 0px;
   overflow-x: hidden; }
 
-/* 12 column grid system is a good setup */
-/* Guideline for images: set the width and height in HTML as a ratio, then set the width in CSS to "100%" and the height to "auto" */
+body {
+  background-color: #777777;
+  background-repeat: repeat; }
+
+#mainGrid {
+  background-color: white; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
 /* prevents the text size in web kit and microsoft browsers from changing when phone orientation is changed. */
 html {
   -webkit-text-size-adjust: 100%;
@@ -327,379 +339,194 @@ html {
 
 /* Set basic font-family/weight for the whole body */
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Chango', cursive;
   /* Normal default font size. */
   font-size: 16px;
   font-weight: 300; }
 
-.navigation-container a {
-  font-size: 20px;
-  color: white; }
-
-/* Stop the logo from being wider than the screen on smaller screens. */
-.navigation-container img {
-  max-width: 100%;
-  height: auto; }
-
-/* ///// */
-/* ///// grid rules */
-/* ///// */
-/* makes sure every row stays below the content above it */
-.row {
-  clear: both; }
-
-/* Makes them act like columns. */
-/* Limits max width, centers content in container. */
-.limited {
-  max-width: 1140px;
-  margin: auto; }
-
-.column {
-  float: left;
-  padding: 0 2vw;
-  margin: 0 0 .75rem 0; }
-
-.small-12 {
-  width: 100%; }
-
-.small-4 {
-  width: 33.33333%; }
-
-/*  */
-/* header rules */
-/*  */
-header {
-  background-color: white; }
-
-header img {
-  float: left;
-  height: 85px;
-  padding-right: 10px; }
-
-header h1, header h2 {
-  margin: 0;
-  /* bold weight */
-  font-weight: 300;
-  font-style: italic; }
-
-header h1 {
-  padding: .5rem 0 0 0;
-  font-size: 1.95rem; }
-
-header h2 {
-  padding: .2rem 0 0 0;
-  font-size: 1.05rem; }
-
-main h1 {
-  color: #4e7aa6;
-  font-style: italic;
-  margin: .5rem 0 .1rem 0;
-  font-size: 2.5rem; }
-
-.labeled {
-  position: relative; }
-
-.labeled h6 {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 0;
-  width: 100%;
-  padding: .3rem 1rem; }
-
-.labeled h6 {
-  /* line up at the top */
-  top: 0;
-  font-size: 2rem;
-  font-weight: 300; }
-
-.labeled p {
-  /* line up at the bottom */
-  bottom: 0;
-  font-weight: 700;
-  color: #b00; }
-
-#line-break {
-  background-color: blue; }
-
 footer {
-  color: white;
-  background-color: #306c9e;
-  font-size: 0.8rem;
-  margin-top: 1.5em; }
-
-footer h2 {
-  /* Note- no left/right margin here. */
-  margin: 1rem 0 .3rem 0;
-  text-align: center; }
-
-/* Inserts content after floated items and prevents the container from collapsing. */
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-button#hamburgerBtn {
-  /* Removes the border and background of the button */
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2.4rem;
-  cursor: pointer;
-  padding: 0 30px 0 2vw; }
+  background: #FFAC60;
+  display: flex;
+  justify-content: space-evenly; }
+  footer p {
+    color: white;
+    text-align: center;
+    font-size: 1.2em; }
 
 nav {
-  background-color: #78b6e6; }
+  background: #FFAC60; }
+  nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .8rem 0;
+    text-align: center; }
+  nav li {
+    list-style-type: none; }
+  nav li.active {
+    background-color: #946940; }
+  nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2); }
+  nav ul.open {
+    display: block; }
+  nav ul {
+    display: none;
+    margin: 0;
+    padding: 0; }
+  nav button {
+    /* Removes the border and background of the button */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.4rem;
+    cursor: pointer;
+    padding: 0 30px 0 2vw; }
 
-nav ul {
-  margin: 0;
-  padding: 0; }
+#mainSection {
+  background-color: #E1F6FF;
+  padding: 0 1em 0 1em;
+  border-radius: 30px;
+  margin-bottom: 1.5em; }
+  #mainSection h2 {
+    padding-top: 0.4em;
+    font-size: 28px; }
 
-nav li {
-  list-style-type: none; }
-
-nav a {
-  display: block;
-  padding: .8rem 0;
-  color: #eee;
-  text-align: center;
-  text-decoration: none; }
-
-/* Shows where the user currently is on the nav bar (wayfinding). */
-nav li.active {
-  background-color: #306c9e; }
-
-/* Darkens the button when hovered over. */
-nav a:hover {
-  background-color: rgba(0, 0, 0, 0.2); }
-
-/* Only if it has the open class, display the navigation items. */
-nav ul.open {
-  display: block; }
-
-nav ul {
-  display: none; }
-
-/* Photo by <a href="https://unsplash.com/@homajob?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Scott Graham</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
-main img {
-  /* Takes up the entire width of its container. */
-  width: 100%;
-  /* Keeps the image's original ratio (not stretched/squashed) */
-  height: auto; }
-
-.text-wrap {
-  width: 200px;
-  height: auto;
-  float: left;
-  margin-right: 1.5em; }
-
-.service {
-  margin-bottom: 2em; }
-
-.service img {
-  width: 500px; }
-
-iframe {
-  width: 100%; }
-
-.primary-color {
-  color: #306c9e; }
-
-hr {
-  margin: 1em 0 1em 0; }
-
-a {
-  color: inherit; }
-
-.standard-button button {
-  padding: 1em;
-  color: white;
-  background-color: #306c9e;
-  border: #78b6e6 solid 2px;
-  border-radius: 10px; }
-
-#phoneButton button {
-  padding: 1em;
-  color: white;
-  background-color: #306c9e;
-  border: #78b6e6 solid 2px;
-  border-radius: 10px; }
-
-.iframe-rwd {
-  position: relative;
-  padding-bottom: 65.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden; }
-
-.iframe-rwd iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-p {
-  font-size: 1.3em;
-  line-height: 1.2em; }
-
-form input, form textarea {
-  width: 100%; }
-
-input[type="submit"] {
-  padding: 0.5em;
-  text-align: center;
-  border-style: none;
-  color: white;
-  background-color: #4e7aa6;
-  font-size: 1.3em;
-  border-radius: 10px;
-  margin-bottom: 2em; }
-
-.contact-info p {
-  font-size: 1em;
-  color: #306c9e; }
-
-.center-me {
-  margin: auto;
-  width: 150px; }
-
-.certifications {
+h1, h2 {
+  font-weight: normal;
   text-align: center; }
 
-#aicpa-logo {
-  width: 40%;
+h1 {
+  font-size: 36px; }
+
+header h2 {
+  font-size: 13px; }
+
+#portrait > img {
+  width: 200px;
   height: auto;
-  margin-bottom: 1em; }
+  display: block;
+  margin: 0.5em auto 0.5em auto; }
 
-#proadvisor-logo {
-  width: 30%;
-  height: auto; }
+p {
+  font-family: 'Cambo', serif;
+  font-size: 24px; }
 
-.large-only {
-  display: none; }
+.project-card {
+  padding: 1em;
+  background-color: #FFDBB1;
+  margin-bottom: 2em;
+  max-width: 332px; }
+  .project-card img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: auto; }
+  .project-card div {
+    margin-top: 1em; }
+  .project-card a {
+    background-color: #77CEFF;
+    color: white;
+    font-size: 36px;
+    font-family: 'Cambo', serif;
+    padding: 0.2em;
+    width: 3em;
+    text-align: center;
+    text-decoration: none; }
+  .project-card a:hover {
+    background-color: #468ab1; }
+  .project-card h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em; }
+  .project-card p {
+    font-family: 'Times New Roman', Times, serif; }
+  .project-card ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  .project-card ul li {
+    list-style-type: none;
+    background-color: #FFAC60;
+    text-align: center;
+    padding: 0.3em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    margin-bottom: 0.5em; }
 
-.full-width {
-  width: 100%; }
-
-button {
-  font-size: 1.3em; }
-
-h2 {
-  font-size: 1.6em;
-  margin: 1em 0 0 0; }
-
-h3 {
-  font-size: 1.4em; }
-
-.standard-button button:hover {
-  background-color: #295a83; }
-
-ul li a {
-  list-style: none;
-  font-size: 1.3em;
-  line-height: 1.5em;
-  text-decoration: none;
-  color: #306c9e; }
-
-button a {
-  text-decoration: none; }
-
-button {
-  cursor: pointer; }
-
-.resources-image {
-  margin-top: 1em; }
-
-.services li {
-  font-size: 1.1em; }
+.flex-spacing {
+  display: flex;
+  justify-content: space-evenly; }
 
 /* Smallest screen we deal with is 320px. 768px is about the width of a phone screen turned sideways. */
 @media only screen and (min-width: 768px) {
-  /* Smallest screen we deal with is 320px. 768px is about the width of a phone screen turned sideways. */
-  /* Increase size of header elements for medium size screens */
+  #mainGrid {
+    padding: 2em 4em;
+    margin-left: 2em;
+    margin-right: 2em;
+    justify-self: center; }
+
+  nav, footer {
+    box-shadow: 1px 1px 3px black; }
+
+  nav {
+    /* don't display the hamburger button if not phone-size. */
+    /* Make sure navigation displays */
+    box-shadow: 5px, black; }
+    nav button {
+      display: none; }
+    nav ul {
+      display: block; }
+    nav li {
+      /* Arrange items left to right. */
+      float: left;
+      /* 5 items, so 20% uses all the space. */
+      width: 20%; }
+
+  #portrait > img {
+    width: 200px;
+    margin-right: 2em; }
+
   header h1 {
-    font-size: 2rem; }
-
+    font-size: 50px; }
   header h2 {
-    font-size: 1.5rem; }
-
-  header img {
-    height: 100px; }
-
-  .medium-3 {
-    width: 25%; }
-
-  .medium-4 {
-    width: 33.3333333%; }
-
-  .medium-5 {
-    width: 41.666666667%; }
-
-  .medium-6 {
-    width: 50%; }
-
-  .medium-7 {
-    width: 58.333333333%; }
-
-  .medium-8 {
-    width: 66.6666667%; }
-
-  .medium-12 {
-    width: 100%; }
-
-  /* don't display the hamburger button if not phone-size. */
-  nav button {
-    display: none; }
-
-  /* Make sure navigation displays */
-  nav ul {
-    display: block; }
-
-  nav li {
-    /* Arrange items left to right. */
-    float: left;
-    /* 5 items, so 20% uses all the space. */
-    width: 20%; } }
+    font-size: 20px; } }
 /* end of media query */
 /* Common for large size- 1200px or 1024px */
 @media only screen and (min-width: 1200px) {
-  /* Common for large size- 1200px or 1024px */
-  .large-3 {
-    width: 25%; }
-
-  .large-4 {
-    width: 33.3333333%; }
-
-  .large-6 {
-    width: 50%; }
-
-  .large-12 {
-    width: 100%; }
-
-  /* Get nav menu items to line up with the logo above on the left side. */
-  nav ul {
-    margin-left: 2vw; }
-
-  /* Makes sure the menu uses the width of the text links. */
-  nav li {
-    width: auto; }
-
-  /* Makes nav items smaller- don't need to be touched anymore. */
-  nav a {
-    padding: .7rem 1rem; }
-
-  .no-large {
-    display: none; }
-
-  .large-only {
-    display: inline-block; }
-
-  #proadvisor-logo-large {
-    margin: 2em;
-    height: auto; }
-
-  #aicpa-logo {
-    margin-bottom: 3em; } }
+  #mainGrid {
+    margin: 0 auto;
+    max-width: 1200px; } }
 /* end of media query */
+#mainGrid {
+  display: grid;
+  grid: auto-flow min-content/1fr;
+  grid-template-areas: "nav     "  "header  " "portrait"    "main    " "footer  "; }
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+@media only screen and (min-width: 768px) {
+  #mainGrid {
+    grid-template-areas: "header portrait"  "nav    nav     " "main   main    "    "footer footer  "; } }
+/* end of media query */
+/* Defines what is assigned to each grid area. */
+header {
+  grid-area: header; }
+
+aside {
+  grid-area: aside; }
+
+nav {
+  grid-area: nav; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer; }
+
+#portrait {
+  grid-area: portrait; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,28 +1,5 @@
-/* Common for large size- 1200px or 1024px */
-    .large-3 {width: 25%;}
-    .large-4 {width: 33.3333333%;}
-    .large-6 {width: 50%;}
-    .large-12{width: 100%;}
-
-
-/* Get nav menu items to line up with the logo above on the left side. */
-nav ul {margin-left: 2vw;}
-/* Makes sure the menu uses the width of the text links. */
-nav li {width: auto;}
-/* Makes nav items smaller- don't need to be touched anymore. */
-nav a {padding: .7rem 1rem;}
-
-
-.no-large{display: none;}
-
-.large-only{display: inline-block;}
-
-#proadvisor-logo-large {
-    // width: 30%;
-    margin: 2em;
-    height: auto;
-}
-
-#aicpa-logo {
-    margin-bottom: 3em;
+#mainGrid {
+    // Auto margin keeps the main grid centered horizontally.
+    margin: 0 auto;
+    max-width: 1200px;
 }

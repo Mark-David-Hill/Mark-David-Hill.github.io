@@ -1,0 +1,48 @@
+#mainGrid {
+    display: grid;
+    grid: auto-flow min-content/1fr;
+    // Set up the basic grid areas. This is the layout for Small Screens.
+    grid-template-areas: "nav     " 
+                         "header  "
+                         "portrait"   
+                         "main    "
+                         "footer  ";
+    // row-gap: 2em;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+// Grid for medium-size screens.
+@media only screen and (min-width: 768px) {
+    // Set up basic grid area for medium size screens.
+    #mainGrid {
+        grid-template-areas:"header portrait" 
+                            "nav    nav     "
+                            "main   main    "   
+                            "footer footer  ";
+    }
+
+} /* end of media query */
+
+//Grid for large-size screens.
+// @media only screen and (min-width: 1200px) {
+                   
+
+// } /* end of media query */
+
+
+/* Defines what is assigned to each grid area. */
+header {grid-area: header;}
+aside {grid-area: aside;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+#portrait {
+    grid-area: portrait;
+}
