@@ -330,7 +330,7 @@ html, body {
     padding: 1em;
     max-width: 400px;
     margin: auto;
-    background-color: rgb(156, 255, 156);
+    background-color: rgb(255, 183, 67);
     padding-right: 2em; }
   
   @media only screen and (min-width: 768px) {
@@ -430,7 +430,7 @@ html, body {
     margin-left: 13px;
     margin-bottom: 0; }
 
-    :root {
+    /* :root {
       touch-action: pan-x pan-y;
       height: 100% 
-    }
+    } */
