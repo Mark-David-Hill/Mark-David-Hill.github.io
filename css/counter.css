@@ -424,3 +424,8 @@ html, body {
     font-size: 15px;
     margin-left: 13px;
     margin-bottom: 0; }
+
+    :root {
+      touch-action: pan-x pan-y;
+      height: 100% 
+    }
