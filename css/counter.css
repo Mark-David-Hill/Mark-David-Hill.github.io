@@ -305,6 +305,11 @@
   [hidden] {
     display: none; }
 
+/* End of Normalize CSS */
+
+/* Start of Counter CSS */
+
+
 * {
     box-sizing: border-box; }
 
@@ -325,7 +330,7 @@ html, body {
     padding: 1em;
     max-width: 400px;
     margin: auto;
-    background-color: white;
+    background-color: rgb(156, 255, 156);
     padding-right: 2em; }
   
   @media only screen and (min-width: 768px) {
