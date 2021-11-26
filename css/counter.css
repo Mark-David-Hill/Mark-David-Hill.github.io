@@ -353,7 +353,7 @@ body {
     padding: 1em;
     max-width: 400px;
     margin: auto;
-    background-color: rgb(95, 67, 255);
+    background-color: rgb(255, 67, 67);
     padding-right: 2em; }
   
   @media only screen and (min-width: 768px) {
@@ -429,6 +429,11 @@ body {
       font-size: 1.3em;
       text-align: center;
       align-self: center; }
+      .currencyRow div {
+        width: 80%;
+        font-size: 1.3em;
+        text-align: center;
+        align-self: center; }
     .currencyRow .currencyCountContainer, .currencyRow .currencyTotal {
       border: solid 1px black;
       padding: 0.3em 0; }
