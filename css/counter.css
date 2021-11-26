@@ -353,7 +353,7 @@ body {
     padding: 1em;
     max-width: 400px;
     margin: auto;
-    background-color: rgb(173, 231, 118);
+    background-color: rgb(195, 118, 231);
     padding-right: 2em; }
   
   @media only screen and (min-width: 768px) {
@@ -416,7 +416,7 @@ body {
       font-size: 3.5em;
       font-weight: 900;
       /* width: 100%; */
-      width: 5em;
+      width: 3em;
       border: none;
       border-radius: 10%; }
     .currencyRow button:hover {
