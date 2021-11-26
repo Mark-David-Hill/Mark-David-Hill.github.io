@@ -353,7 +353,7 @@ body {
     padding: 1em;
     max-width: 400px;
     margin: auto;
-    background-color: rgb(255, 67, 67);
+    background-color: rgb(255, 236, 67);
     padding-right: 2em; }
   
   @media only screen and (min-width: 768px) {
@@ -463,3 +463,7 @@ body {
       touch-action: pan-x pan-y;
       height: 100% 
     } */
+
+  button {
+      touch-action: manipulation;
+  }
