@@ -120,4 +120,4 @@ clearButton.addEventListener("click", function() {
     }
 });
 
-document.getElementById("clearButton").innerText = "JS Test"
+// document.getElementById("clearButton").innerText = "JS Test"
