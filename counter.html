@@ -18,13 +18,15 @@
         <title>Japanese Currency Counter</title>
     </head>
     <body>
+        <!-- Make sure click even works? -->
+        <div onclick="void(0);">
         <main>
             <!-- Main Grid -->
             <div class="mainGrid">
                 <!-- Top Row -->
                 <div class="totalsRow">
                     <!-- Clear Button -->
-                    <button id="clearButton">Clear 1.11</button>
+                    <button id="clearButton">Clear 1.12</button>
                     <!-- Total Value -->
                     <span id="totalValueContainer">Total:￥0</span>
                 </div>
@@ -193,6 +195,8 @@
                 </div>
             </div>
         </main>
+        </div>
+        <!-- End 'onclick="void(0);' div -->
         <script src="./js/counter.js"></script>
     </body>
 </html>
