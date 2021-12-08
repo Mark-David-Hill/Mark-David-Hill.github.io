@@ -89,18 +89,10 @@ function createCurrency(value) {
     document.getElementById(`yen${value}PlusButton`).addEventListener("click", function() {
         newCurrency.increment();
     });
-    document.getElementById(`yen${value}PlusButton`).addEventListener('touchstart', () => {});
-    document.getElementById(`yen${value}PlusButton`).addEventListener('touchend', () => {});
-    document.getElementById(`yen${value}PlusButton`).addEventListener('touchcancel', () => {});
-    document.getElementById(`yen${value}PlusButton`).addEventListener('touchmove', () => {});
     // Create event listener for the minus button for this currency
     document.getElementById(`yen${value}MinusButton`).addEventListener("click", function() {
         newCurrency.decrement();
     });
-    document.getElementById(`yen${value}MinusButton`).addEventListener('touchstart', () => {});
-    document.getElementById(`yen${value}MinusButton`).addEventListener('touchend', () => {});
-    document.getElementById(`yen${value}MinusButton`).addEventListener('touchcancel', () => {});
-    document.getElementById(`yen${value}MinusButton`).addEventListener('touchmove', () => {});
     allCurrencies.push(newCurrency);
 }
 
@@ -127,5 +119,3 @@ clearButton.addEventListener("click", function() {
         allCurrencies[i].clear();
     }
 });
-
-document.getElementById("clearButton").innerText = "Empty Event Listeners"
