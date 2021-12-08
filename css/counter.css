@@ -361,10 +361,7 @@ body {
       margin-top: 2em;
       border-radius: 2%; } }
   body {
-    background-color: #90c9ff; 
-    cursor: pointer;
-  }
-    
+    background-color: #9dff90; }
   
   .totalsRow {
     display: flex;
