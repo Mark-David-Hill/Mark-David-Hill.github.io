@@ -119,3 +119,5 @@ clearButton.addEventListener("click", function() {
         allCurrencies[i].clear();
     }
 });
+
+document.getElementById("clearButton").innerText = "JS Test"
