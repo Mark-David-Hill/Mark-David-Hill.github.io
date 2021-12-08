@@ -361,7 +361,7 @@ body {
       margin-top: 2em;
       border-radius: 2%; } }
   body {
-    background-color: #f0a45d; }
+    background-color: #5df076; }
   
   .totalsRow {
     display: flex;
@@ -414,7 +414,7 @@ body {
       color: #C4C4C4;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 2.5em;
-      font-weight: 900;
+      font-weight: 300;
       /* width: 100%; */
       width: 3em;
       border: none;
