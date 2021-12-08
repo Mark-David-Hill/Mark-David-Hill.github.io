@@ -348,8 +348,8 @@ body {
   /* Common for large size- 1200px or 1024px */
   /* end of media query */
   .mainGrid {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     padding: 1em;
     max-width: 400px;
     margin: auto;
@@ -361,11 +361,11 @@ body {
       margin-top: 2em;
       border-radius: 2%; } }
   body {
-    background-color: #bdbdbd; }
+    background-color: #e26060; }
   
   .totalsRow {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     margin-left: 1em; }
     .totalsRow #clearButton {
       width: 3.2em;
@@ -394,13 +394,13 @@ body {
       width: 100%;
       font-size: 1.5em; }
   
-  .currencyGrid {
+  /* .currencyGrid {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column; } */
   
   .currencyRow {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     justify-content: space-evenly;
     margin: 0.2em 0; }
     .currencyRow img {
