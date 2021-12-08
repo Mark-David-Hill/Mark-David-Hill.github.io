@@ -361,7 +361,7 @@ body {
       margin-top: 2em;
       border-radius: 2%; } }
   body {
-    background-color: #6653d3; }
+    background-color: #9dff90; }
   
   .totalsRow {
     display: flex;
@@ -465,6 +465,6 @@ body {
       height: 100% 
     } */
 
-  button {
+  /* button {
       touch-action: manipulation;
-  }
+  } */
