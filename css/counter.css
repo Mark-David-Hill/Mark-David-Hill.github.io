@@ -459,7 +459,7 @@ body {
     margin-left: 13px;
     margin-bottom: 0; }
 
-
-  button {
-      touch-action: manipulation;
-  }
+/* Prevent zooming when double tapping buttons on mobile */
+button {
+    touch-action: manipulation;
+}

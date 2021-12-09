@@ -456,6 +456,10 @@ p {
   display: flex;
   justify-content: space-evenly; }
 
+/* Prevent zooming when double tapping buttons on mobile */
+button {
+  touch-action: manipulation; }
+
 /* Smallest screen we deal with is 320px. 768px is about the width of a phone screen turned sideways. */
 @media only screen and (min-width: 768px) {
   #mainGrid {
