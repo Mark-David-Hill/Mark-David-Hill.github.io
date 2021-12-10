@@ -325,8 +325,13 @@ html, body {
     padding: 0px;
     overflow-x: hidden; }
 
-/* prevents the text size in web kit and microsoft browsers from changing when phone orientation is changed. */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+html {
+  /* prevents the text size in web kit and microsoft browsers from changing when phone orientation is changed. */
+  -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+  /* Remove gray background for buttons on mobile */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 
 /* Makes sure all browsers implement the box-model in the same way. Makes sure padding is added to the inside of an element and margin to the outside. */
 * {
@@ -342,11 +347,10 @@ body {
   font-size: 16px;
   font-weight: 300;
 }
-  
-  /* Smallest screen we deal with is 320px. 768px is about the width of a phone screen turned sideways. */
-  /* end of media query */
-  /* Common for large size- 1200px or 1024px */
-  /* end of media query */
+
+body {
+  background-color: #ff5050; }
+
   .mainGrid {
     display: flex;
     flex-direction: column;
@@ -355,13 +359,11 @@ body {
     margin: auto;
     background-color: white;
     padding-right: 2em; }
-  
+    
   @media only screen and (min-width: 768px) {
     .mainGrid {
       margin-top: 2em;
       border-radius: 2%; } }
-  body {
-    background-color: #000000; }
   
   .totalsRow {
     display: flex;
