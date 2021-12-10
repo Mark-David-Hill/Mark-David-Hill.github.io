@@ -380,7 +380,8 @@ body {
       background-color: #9CDAB1;
       font-size: 18px;
       padding: 0;
-      margin-right: 2em; }
+      margin-right: 2em; 
+    }
     .totalsRow #clearButton:hover {
       background-color: #8bdaa5; }
     .totalsRow #clearButton:active {
@@ -455,13 +456,13 @@ body {
     background-color: #F2EBEB; }
   
   .colName p {
-    font-size: 24px;
+    font-size: 1em;
     margin-left: .5em;
     margin-bottom: 0;
     font-weight: bold; }
   
   .smallColName p {
-    font-size: 15px;
+    font-size: 12px;
     margin-left: 13px;
     margin-bottom: 0; }
 
