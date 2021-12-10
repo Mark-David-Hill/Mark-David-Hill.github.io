@@ -338,7 +338,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 /* Set basic font-family/weight for the whole body */
 body {
-  background-color: #ffc21b;
+  background-color: #981bff;
   font-family: Arial, Helvetica, sans-serif;
   /* Normal default font size. */
   font-size: 16px;
@@ -403,7 +403,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 0.2em 0; }
+    margin: 0.2em 0; 
+  }
     .currencyImage {
       width: 4.5em;
       height: 4.5em;
@@ -416,11 +417,6 @@ body {
       /* Prevent gray background color on mobile */
       background: transparent;
       color: #C4C4C4;
-      /* font-family: Arial, Helvetica, sans-serif; */
-      /* font-size: 2em;
-      font-weight: 300; */
-      /* width: 100%; */
-      /* width: 3em; */
       border: none;
       border-radius: 10%; }
     .currencyRow button:hover {
@@ -441,9 +437,13 @@ body {
 
     .currencyRow .currencyCountContainer, .currencyRow .currencyTotal {
       border: solid 1px black;
-      padding: 0.3em 0; }
+      padding: 0.3em 0; 
+      margin-bottom: 0.3em;
+    }
     .currencyRow .currencyCountContainer {
-      margin-right: 0.4em; }
+      margin-right: 0.2em; 
+      margin-bottom: 0.3em;
+    }
   
   .currencyTotal {
     background-color: #CFEBD9; }
