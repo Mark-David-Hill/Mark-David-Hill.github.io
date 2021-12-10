@@ -338,7 +338,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 /* Set basic font-family/weight for the whole body */
 body {
-  background-color: #981bff;
+  background-color: #1bf7ff;
   font-family: Arial, Helvetica, sans-serif;
   /* Normal default font size. */
   font-size: 16px;
@@ -406,8 +406,8 @@ body {
     margin: 0.2em 0; 
   }
     .currencyImage {
-      width: 4.5em;
-      height: 4.5em;
+      width: 4em;
+      height: 4em;
       border-radius: 50%;
       background-color: white;
     }
