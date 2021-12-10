@@ -335,8 +335,10 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     box-sizing: border-box;
 }
 
+
 /* Set basic font-family/weight for the whole body */
 body {
+  background-color: #ffc21b;
   font-family: Arial, Helvetica, sans-serif;
   /* Normal default font size. */
   font-size: 16px;
@@ -360,8 +362,7 @@ body {
     .mainGrid {
       margin-top: 2em;
       border-radius: 2%; } }
-  body {
-    background-color: #000000; }
+  
   
   .totalsRow {
     display: flex;
@@ -411,6 +412,8 @@ body {
     .currencyRow .squareImg {
       border-radius: 0; }
     .currencyRow button {
+      /* Prevent gray background color on mobile */
+      background: transparent;
       color: #C4C4C4;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 2em;
