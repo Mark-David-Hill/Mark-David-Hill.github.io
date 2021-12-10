@@ -120,5 +120,4 @@ clearButton.addEventListener("click", function() {
     }
 });
 
-// Allow active styles to work in Safari on mobile
-document.addEventListener("touchstart", function(){}, true);
+// document.getElementById("clearButton").innerText = "JS Test"
