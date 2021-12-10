@@ -438,11 +438,11 @@ body {
     .currencyRow .currencyCountContainer, .currencyRow .currencyTotal {
       border: solid 1px black;
       padding: 0.3em 0; 
-      margin-bottom: 0.3em;
+      margin-bottom: 0.1em;
     }
     .currencyRow .currencyCountContainer {
       margin-right: 0.2em; 
-      margin-bottom: 0.3em;
+      margin-bottom: 0.1em;
     }
   
   .currencyTotal {
