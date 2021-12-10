@@ -498,7 +498,10 @@ button {
 @media only screen and (min-width: 1200px) {
   #mainGrid {
     margin: 0 auto;
-    max-width: 1200px; } }
+    max-width: 1200px; }
+
+  #projects {
+    margin: 0 2em; } }
 /* end of media query */
 #mainGrid {
   display: grid;
