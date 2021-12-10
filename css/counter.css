@@ -404,11 +404,12 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0.2em 0; }
-    .currencyRow img {
+    .currencyImage {
       width: 4.5em;
       height: 4.5em;
       border-radius: 50%;
-      background-color: white; }
+      background-color: white;
+    }
     .currencyRow .squareImg {
       border-radius: 0; }
     .currencyRow button {
