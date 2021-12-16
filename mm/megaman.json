@@ -323,7 +323,7 @@
             "description":"Mega Man 7 is where the series all started. It introduced many series staples such as choosing the order you complete stages in, gaining abilities from the robot masters you defeat, and a rock-paper-scissors style weapons system.",
             "console":"NES",
             "releaseYear":"?",
-            "boxart":"images/mm3.png",
+            "boxart":"images/mm7.png",
             "images": [
                 "images/mm7Title.png",
                 "images/mm7StageSelect.png"
@@ -380,59 +380,6 @@
             "images": [
                 "images/mm8Title.png",
                 "images/mm8StageSelect.png"
-            ],
-            "robotMasters": [
-                {
-                    "reference":"cut",
-                    "name":"Cut Man",
-                    "id":"DLN. 003"
-                },
-                {
-                    "reference":"guts",
-                    "name":"Guts Man",
-                    "id":"DLN. 004"
-                },
-                {
-                    "reference":"ice",
-                    "name":"Ice Man",
-                    "id":"DLN. 005"
-                },
-                {
-                    "reference":"bomb",
-                    "name":"Bomb Man",
-                    "id":"DLN. 006"
-                },
-                {
-                    "reference":"fire",
-                    "name":"Cut Man",
-                    "id":"DLN. 003"
-                },
-                {
-                    "reference":"elec",
-                    "name":"Cut Man",
-                    "id":"DLN. 003"
-                }
-            ],
-            "newFeatures": [
-                "Introducing Mega Man, Dr. Wily, Dr. Light, and Roll",
-                "Classic Mega Man run, jump, and shoot gameplay",
-                "Non-linear stage select",
-                "Gain a weapon from each main boss defeated",
-                "Rock-Paper-Scissors style weapon system against bosses",
-                "First and only appearance of the magnet beam",
-                "First and only appearance of a points system",
-                "Only game with 6 rather than 8 Robot Masters"
-            ]
-        },
-        "mmb": {
-            "title":"Mega Man & Bass",
-            "description":"Mega Man 8 is where the series all started. It introduced many series staples such as choosing the order you complete stages in, gaining abilities from the robot masters you defeat, and a rock-paper-scissors style weapons system.",
-            "console":"NES",
-            "releaseYear":"?",
-            "boxart":"images/mmb.png",
-            "images": [
-                "images/mmbTitle.png",
-                "images/mmbStageSelect.png"
             ],
             "robotMasters": [
                 {
