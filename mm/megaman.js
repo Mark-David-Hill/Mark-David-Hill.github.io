@@ -20,23 +20,29 @@ xhr.onload = function() {
 
 // Display all games
 function displayGames() {
-    // const games = Object.keys(mmData.games);
     content = "";
 
+    // loop through each game
     for (let i in mmData.games) {
+         //i is is the key for each game
         let game = mmData.games[i];
-        // i is is the key for each game
-        content += '<div class="col"><div class="card shadow-sm">' + `<img src="${game.boxart}" class="img-fluid" alt="${game} box-art"> <div class="card-body">
-        <p class="card-text">${game.description}</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">${game.title}</button>
-          </div>
-          <small class="text-muted">${game.console}</small>
-        </div>
-      </div>
-    </div></div>`
+        // Generate HTML content for each game card
+        content += 
+            `<div class="col">
+                <div class="card shadow-sm"> 
+                    <img src="${game.boxart}" class="img-fluid" alt="${game} box-art"> <div class="card-body">
+                    <p class="card-text">${game.description}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">${game.title}</button>
+                        </div>
+                        <small class="text-muted">${game.console}</small>
+                    </div>
+                </div>
+            </div>
+        </div>`
     }
     
+    // Display all games to the screen.
     document.getElementById('mainContainer').innerHTML = content;
 }
