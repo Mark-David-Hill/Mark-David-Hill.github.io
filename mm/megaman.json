@@ -8,7 +8,7 @@
             "boxart":"images/mm1.png",
             "images": [
                 "images/mm1Title.png",
-                "images/mm1StageSelect.png"
+                "images/mm1Stages.png"
             ],
             "robotMasters": [
                 {
@@ -61,7 +61,7 @@
             "boxart":"images/mm2.png",
             "images": [
                 "images/mm2Title.png",
-                "images/mm2StageSelect.png"
+                "images/mm2Stages.png"
             ],
             "robotMasters": [
                 {
@@ -114,7 +114,7 @@
             "boxart":"images/mm3.png",
             "images": [
                 "images/mm3Title.png",
-                "images/mm3StageSelect.png"
+                "images/mm3Stages.png"
             ],
             "robotMasters": [
                 {
@@ -167,7 +167,7 @@
             "boxart":"images/mm4.png",
             "images": [
                 "images/mm4Title.png",
-                "images/mm4StageSelect.png"
+                "images/mm4Stages.png"
             ],
             "robotMasters": [
                 {
@@ -220,7 +220,7 @@
             "boxart":"images/mm5.png",
             "images": [
                 "images/mm5Title.png",
-                "images/mm5StageSelect.png"
+                "images/mm5Stages.png"
             ],
             "robotMasters": [
                 {
@@ -273,7 +273,7 @@
             "boxart":"images/mm6.png",
             "images": [
                 "images/mm6Title.png",
-                "images/mm6StageSelect.png"
+                "images/mm6Stages.png"
             ],
             "robotMasters": [
                 {
@@ -326,7 +326,7 @@
             "boxart":"images/mm7.png",
             "images": [
                 "images/mm7Title.png",
-                "images/mm7StageSelect.png"
+                "images/mm7Stages.png"
             ],
             "robotMasters": [
                 {
@@ -379,7 +379,7 @@
             "boxart":"images/mm8.png",
             "images": [
                 "images/mm8Title.png",
-                "images/mm8StageSelect.png"
+                "images/mm8Stages.png"
             ],
             "robotMasters": [
                 {
@@ -432,7 +432,7 @@
             "boxart":"images/mm9.png",
             "images": [
                 "images/mm9Title.png",
-                "images/mm9StageSelect.png"
+                "images/mm9Stages.png"
             ],
             "robotMasters": [
                 {
@@ -485,7 +485,7 @@
             "boxart":"images/mm10.png",
             "images": [
                 "images/mm10Title.png",
-                "images/mm10StageSelect.png"
+                "images/mm10Stages.png"
             ],
             "robotMasters": [
                 {
@@ -538,7 +538,7 @@
             "boxart":"images/mm11.png",
             "images": [
                 "images/mm11Title.png",
-                "images/mm11StageSelect.png"
+                "images/mm11Stages.png"
             ],
             "robotMasters": [
                 {
