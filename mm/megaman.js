@@ -42,7 +42,7 @@ function displayGames() {
     }
     
     // Display all games to the screen.
-    document.getElementById('mainContainer').innerHTML = content;
+    document.getElementById('gamesContainer').innerHTML = content;
 
     // Add click events to game buttons
     let gameBtns = document.getElementsByClassName('gameBtn');
@@ -87,8 +87,10 @@ function displayGame(btn) {
         </div>
       </div> <!-- End MM1 Section -->`
 
+    // Hide games
+    document.getElementById('gamesAlbum').style.display = "none";
     // Display game info
-    document.getElementById('mainContainer').innerHTML = content;
+    document.getElementById('gameContainer').innerHTML = content;
 }
 
 // displayGame(mm1);
