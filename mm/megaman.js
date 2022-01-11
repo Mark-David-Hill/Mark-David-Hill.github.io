@@ -34,7 +34,7 @@ function displayGames() {
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary gameBtn" id="${game.id}Btn">${game.title}</button>
                                     </div>
-                                    <small class="text-muted">${game.console}</small>
+                                    <small class="text-muted">${game.releaseYear}, ${game.console}</small>
                                 </div>
                             </div>
                         </div>
@@ -57,9 +57,9 @@ function displayGames() {
 document.getElementById('gamesBtn').addEventListener("click", function() {
     let album = document.getElementById('gamesAlbum');
     if (album.style.display === 'none') {
+        album.style.display = 'block';
         document.getElementById('gameContainer').innerHTML = "";
         document.getElementById('gameContainer').style.display = none;
-        album.style.display = 'block';
         // Change text of the games button
         document.getElementById('gamesBtn').innerHTML = "Games"
         console.log("Games")
@@ -76,6 +76,15 @@ function displayGame(btn) {
     let game = mmData.games[gameId];
 
     console.log(game.id)
+
+    let consoles;
+
+    if (game.consoles) {
+        consoles = game.consoles;
+    }
+    else {
+        consoles = game.console;
+    }
     
     content +=
         `<div class="container py-3 my-3">
@@ -95,7 +104,7 @@ function displayGame(btn) {
             <p class="lead fw-normal">${game.description}</p>
 
             <button type="button" class="btn btn-sm btn-secondary">Original Release Date: ${game.releaseYear}</button>
-            <button type="button" class="btn btn-sm btn-secondary">Console: ${game.console}</button>
+            <button type="button" class="btn btn-sm btn-secondary">Platform: ${consoles}</button>
           </div>
         </div>
       </div> <!-- End MM1 Section -->`
@@ -108,7 +117,6 @@ function displayGame(btn) {
     document.getElementById('gameContainer').style.display = 'block';
     // Change text of the games button
     document.getElementById('gamesBtn').innerHTML = "&crarr; Games";
-    console.log("&#x25c0 Games") 
 }
 
 // displayGame(mm1);
