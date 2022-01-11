@@ -94,8 +94,8 @@ function displayGame(btn) {
             <h1 class="display-4 fw-normal">${game.title}</h1>
             <p class="lead fw-normal">${game.description}</p>
 
-            <button type="button" class="btn btn-sm btn-secondary">Original Release Date: 1987</button>
-            <button type="button" class="btn btn-sm btn-secondary">Console: NES</button>
+            <button type="button" class="btn btn-sm btn-secondary">Original Release Date: ${game.releaseYear}</button>
+            <button type="button" class="btn btn-sm btn-secondary">Console: ${game.console}</button>
           </div>
         </div>
       </div> <!-- End MM1 Section -->`
