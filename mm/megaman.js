@@ -53,6 +53,19 @@ function displayGames() {
     }
 }
 
+// Games button click event
+document.getElementById('gamesBtn').addEventListener("click", function() {
+    let album = document.getElementById('gamesAlbum');
+    if (album.style.display === 'none') {
+        document.getElementById('gameContainer').innerHTML = "";
+        document.getElementById('gameContainer').style.display = none;
+        album.style.display = 'block';
+        // Change text of the games button
+        document.getElementById('gamesBtn').innerHTML = "Games"
+        console.log("Games")
+    }
+});
+
 
 // Display info about a single game
 function displayGame(btn) {
@@ -89,8 +102,13 @@ function displayGame(btn) {
 
     // Hide games
     document.getElementById('gamesAlbum').style.display = "none";
+    // document.getElementById('gamesAlbum').innerHTML = "";
     // Display game info
     document.getElementById('gameContainer').innerHTML = content;
+    document.getElementById('gameContainer').style.display = 'block';
+    // Change text of the games button
+    document.getElementById('gamesBtn').innerHTML = "&crarr; Games";
+    console.log("&#x25c0 Games") 
 }
 
 // displayGame(mm1);
