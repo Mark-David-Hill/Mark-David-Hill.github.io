@@ -2,6 +2,16 @@
 let mmData;
 let content;
 
+// Change based on hash
+// Push State
+// https://developer.mozilla.org/en-US/docs/Web/API/History/pushState
+
+// https://stackoverflow.com/questions/35549130/simple-spa-single-page-application-implementation-with-hash-change
+
+// https://tutorialzine.com/2015/02/single-page-app-without-a-framework 
+
+
+
 // Get data from JSON file.
 let xhr = new XMLHttpRequest();
 xhr.open('GET', "megaman.json", true);
@@ -15,6 +25,10 @@ xhr.onload = function() {
         displayGames();
     }
 } // end onload
+
+// let state;
+// let title = '';
+// let url;
 
 // Display all games
 function displayGames() {
@@ -43,6 +57,11 @@ function displayGames() {
     
     // Display all games to the screen.
     document.getElementById('gamesContainer').innerHTML = content;
+
+    // state = {'page_id': 'games'};
+    // url = 'megaman.html/games';
+
+    // history.pushState(state, title, url)
 
     // Add click events to game buttons
     let gameBtns = document.getElementsByClassName('gameBtn');
