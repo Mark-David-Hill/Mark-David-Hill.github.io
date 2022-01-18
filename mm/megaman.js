@@ -1,7 +1,3 @@
-
-let mmData;
-let content;
-
 // Change based on hash
 // Push State
 // https://developer.mozilla.org/en-US/docs/Web/API/History/pushState
@@ -10,7 +6,14 @@ let content;
 
 // https://tutorialzine.com/2015/02/single-page-app-without-a-framework 
 
+// 
+// //
+// Initialize
+// //
+// 
 
+let mmData;
+let content;
 
 // Get data from JSON file.
 let xhr = new XMLHttpRequest();
@@ -26,9 +29,25 @@ xhr.onload = function() {
     }
 } // end onload
 
-// let state;
-// let title = '';
-// let url;
+// 
+// //
+// Generate HTML
+// //
+//
+
+function generateHTML(section) {
+
+}
+
+// 
+// //
+// Display 
+// //
+//
+
+function display() {
+    
+}
 
 // Display all games
 function displayGames() {
