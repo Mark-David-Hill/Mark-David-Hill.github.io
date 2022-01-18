@@ -138,5 +138,38 @@ function displayGame(btn) {
     document.getElementById('gamesBtn').innerHTML = "&crarr; Games";
 }
 
+// Display Robot Masters for specific game
+function displayGameRobMas(game) {
+    content = "";
+    for (let i in mmData.games.game) {
+         //i is is the key for each game
+        let robMas = mmData.games[i];
+        let ref = robMas.reference;
+        let name = robMas.name;
+        // Generate HTML content for each game card
+        content += 
+            `<!-- ${name} -->
+            <div class="col col-sm-6 col-md-4 col-lg-2">
+              <div class="card">
+                <img src="images/1/${ref}Face.png" class="card-img-top rounded" alt="...">
+                <div class="card-body text-center">
+                  <a href="#" class="nav-link active" aria-current="page">${name}</a>
+                </div>
+              </div>
+            </div> <!-- End ${name} -->`
+    }
+    
+    // Display all games to the screen.
+    document.getElementById('gameRobMas').innerHTML = content;
+
+    // Add click events to game buttons
+    let gameBtns = document.getElementsByClassName('gameBtn');
+    for (let i = 0; i < gameBtns.length; i++) {
+        gameBtns[i].addEventListener("click", function() {
+            displayGame(gameBtns[i]);
+        });
+    }
+}
+
 // displayGame(mm1);
 
