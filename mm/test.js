@@ -149,12 +149,55 @@ class Album extends Section {
 let mainNav = new Nav('mainNav', true, ['Games', 'Characters', 'this is a test'], ['games', 'characters', 'test'], 'Games');
 
 let gameNav = new Section(false, ['More Info', 'Robot Masters'])
-let games = new Album('games', true);
+
 let game = new Section (false);
 let moreInfo = new Section (false);
 let robMas = new Section (false);
 
+// 
+// games section
+// 
 
+let games = new Album('games', true);
+// Display all games
+function generateGamesHTML() {
+    let cont = "";
+
+    // loop through each game
+    for (let i in mmData.games) {
+         //i is is the key for each game
+        let game = mmData.games[i];
+        // Generate HTML content for each game card
+        cont += 
+            `<div class="col">
+                <div class="card shadow-sm"> 
+                    <img src="images/${game.id}.png" class="img-fluid" alt="${game} box-art"> <div class="card-body">
+                    <p class="card-text">${game.description}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary gameBtn" id="${game.id}Btn">${game.title}</button>
+                        </div>
+                        <small class="text-muted">${game.releaseYear}, ${game.console}</small>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    }
+    games.body = cont;
+    games.target.innerHTML = games.combined;
+
+    // Add click events to game buttons
+    let gameBtns = document.getElementsByClassName('gameBtn');
+    for (let i = 0; i < gameBtns.length; i++) {
+        gameBtns[i].addEventListener("click", function() {
+            displayGame(gameBtns[i]);
+        });
+    }
+}
+
+function displayGame(gameBtn) {
+    console.log('display game: ' + gameBtn);
+}
 
 // 
 // //
@@ -191,6 +234,7 @@ xhr.onload = function() {
     if(xhr.status === 200) {
         mmData = JSON.parse(xhr.responseText);
         console.log(mmData);
+        generateGamesHTML();
         mainNav.display();
         // games.display();
     }
