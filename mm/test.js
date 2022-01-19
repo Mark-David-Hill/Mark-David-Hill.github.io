@@ -88,6 +88,53 @@ class Nav extends Section {
     }
 }
 
+//  Album Class
+class Album extends Section {
+    constructor(targetID, visible) {
+        // Calls constructor of parent class (Section)
+        super(targetID, visible);
+        this.open = `
+            <div id="${targetID}" class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">`
+        this.close = `
+                    </div>
+                </div>
+            </div>`
+        // this.bindClick();
+    }
+    // Generate HTML for the body of the Nav buttons
+    // generateButtons() {
+    //     let cont = '';
+        
+    //     for (let i = 0; i < this.sections.length; i++) {
+    //         let sectionID = this.sectionIDs[i];
+    //         let section = this.sections[i];
+    //         if (this.sections[i] === this.active) {
+    //             cont += `<li class="nav-item"><a id="${sectionID}Btn" href="#" class="nav-link active" aria-current="page">${section}</a></li>`
+    //         }
+    //         else {
+    //             cont += `<li class="nav-item"><a id="${sectionID}Btn" href="#" class="nav-link" aria-current="page">${section}</a></li>`
+    //         }
+    //     }
+    //     return cont;
+    // }
+    // Set up click events (Not working yet)
+    // bindClick() {
+    //     for (let i = 0; i < this.sections.length; i++) {
+    //         // Create click events
+    //         let sectionID = this.sectionIDs[i];
+    //         let btnID = sectionID + 'Btn'
+    //         document.getElementById(btnID).addEventListener("click", function() {
+    //             console.log('clicked a button');
+    //             displayByID(sectionID);
+    //         });
+    //         console.log('set up click event')
+    //     }
+        
+    // }
+}
+
 // 
 // //
 // Set up Section Objects
@@ -102,8 +149,7 @@ class Nav extends Section {
 let mainNav = new Nav('mainNav', true, ['Games', 'Characters', 'this is a test'], ['games', 'characters', 'test'], 'Games');
 
 let gameNav = new Section(false, ['More Info', 'Robot Masters'])
-let games = new Section('games', true);
-games.open = 'my new open'
+let games = new Album('games', true);
 let game = new Section (false);
 let moreInfo = new Section (false);
 let robMas = new Section (false);
