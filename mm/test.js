@@ -11,15 +11,15 @@ let content;
 let target;
 
 // 
-// Create Content Classes
+// Create Section Classes
 // 
 
 let state = ['games'];
 
-// !!!! Try having the Content objects be tied specifically to different HTML elements?
+// !!!! Try having the Section objects be tied specifically to different HTML elements?
 
-// Content Class
-class Content {
+// Section Class
+class Section {
     constructor(targetID, visible) {
         this.targetID = targetID;
         this.visible = visible;
@@ -43,46 +43,52 @@ class Content {
 }
 
 //  Nav Class
-class Nav extends Content {
+class Nav extends Section {
     constructor(targetID, visible, sections) {
-        // Calls constructor of parent class (Content)
+        // Calls constructor of parent class (Section)
         super(targetID, visible);
         this.sections = sections;
         this.open = `
         <!-- Nav -->
         <div class="container">
             <header class="d-flex justify-content-center py-3">
-                <ul class="nav nav-pills">`;
+                <ul class="nav nav-pills">`
         this.close = `
-                </ul>
-            </header>
-        </div> <!-- End Nav -->`;
-        this.body = 'Nav Body';
+        </ul>
+        </header>
+        </div> <!-- End Nav -->`
+        this.body = this.generateButtons();
     }
-    // generateButtons(sections) {
-    //     let cont = '';
-    //     for (let i = 0; i < sections.length; i++) {
-    //         content += `<li class="nav-item"><a href="#" class="nav-link active" aria-current="page">${sections[i]}</a></li>`
-    //     }
-    //     return cont;
-    // }
-    
+    generateButtons() {
+        let cont = '';
+        for (let i = 0; i < this.sections.length; i++) {
+            cont += `<li class="nav-item"><a href="#" class="nav-link active" aria-current="page">${this.sections[i]}</a></li>`
+        }
+        return cont;
+    }
 }
 
 // 
 // //
-// Set up Content Objects
+// Set up Section Objects
 // //
 //
 
-// Content objects
-let mainNav = new Content('mainNav', true, ['Games', 'Characters', 'this is a test']);
+// 
+// Section objects
+// 
+
+// Main Nav
+let mainNav = new Nav('mainNav', true, ['Games', 'Characters', 'this is a test']);
 console.log(mainNav);
-let gameNav = new Content(false, ['More Info', 'Robot Masters'])
-let games = new Content(true);
-let game = new Content (false);
-let moreInfo = new Content (false);
-let robMas = new Content (false);
+// mainNav.body = mainNav.generateButtons();
+
+
+let gameNav = new Section(false, ['More Info', 'Robot Masters'])
+let games = new Section(true);
+let game = new Section (false);
+let moreInfo = new Section (false);
+let robMas = new Section (false);
 
 const mainButtons = ['Games', 'Characters'];
 const gamesButtons = ['More Info', 'Robot Masters', 'Power Ups']
