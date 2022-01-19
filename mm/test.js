@@ -6,17 +6,10 @@
 // //
 // 
 
-let mmData;
-let content;
-let target;
+let mmData; 
+let state = ['mainNav', 'games'];
 
-// 
-// Create Section Classes
-// 
 
-let state = ['games'];
-
-// !!!! Try having the Section objects be tied specifically to different HTML elements?
 
 // Section Class
 class Section {
@@ -32,9 +25,9 @@ class Section {
         return this.open + this.body + this.close;
     }
     display () {
-        console.log('Display')
-        this.target.innerHTML = this.combined;
-        // this.target.style.display = 'block';
+        console.log('Display ' + this.targetID)
+        // this.target.innerHTML = this.combined;
+        this.target.style.display = 'block';
     }
     hide () {
         console.log('Hide')
@@ -44,10 +37,12 @@ class Section {
 
 //  Nav Class
 class Nav extends Section {
-    constructor(targetID, visible, sections) {
+    constructor(targetID, visible, sections, sectionIDs, defaultActive) {
         // Calls constructor of parent class (Section)
         super(targetID, visible);
         this.sections = sections;
+        this.sectionIDs = sectionIDs;
+        this.active = defaultActive;
         this.open = `
         <!-- Nav -->
         <div class="container">
@@ -58,13 +53,38 @@ class Nav extends Section {
         </header>
         </div> <!-- End Nav -->`
         this.body = this.generateButtons();
+        this.target.innerHTML = this.combined;
+        this.bindClick();
     }
+    // Generate HTML for the body of the Nav buttons
     generateButtons() {
         let cont = '';
+        
         for (let i = 0; i < this.sections.length; i++) {
-            cont += `<li class="nav-item"><a href="#" class="nav-link active" aria-current="page">${this.sections[i]}</a></li>`
+            let sectionID = this.sectionIDs[i];
+            let section = this.sections[i];
+            if (this.sections[i] === this.active) {
+                cont += `<li class="nav-item"><a id="${sectionID}Btn" href="#" class="nav-link active" aria-current="page">${section}</a></li>`
+            }
+            else {
+                cont += `<li class="nav-item"><a id="${sectionID}Btn" href="#" class="nav-link" aria-current="page">${section}</a></li>`
+            }
         }
         return cont;
+    }
+    // Set up click events (Not working yet)
+    bindClick() {
+        for (let i = 0; i < this.sections.length; i++) {
+            // Create click events
+            let sectionID = this.sectionIDs[i];
+            let btnID = sectionID + 'Btn'
+            document.getElementById(btnID).addEventListener("click", function() {
+                console.log('clicked a button');
+                displayByID(sectionID);
+            });
+            console.log('set up click event')
+        }
+        
     }
 }
 
@@ -79,58 +99,16 @@ class Nav extends Section {
 // 
 
 // Main Nav
-let mainNav = new Nav('mainNav', true, ['Games', 'Characters', 'this is a test']);
-console.log(mainNav);
-// mainNav.body = mainNav.generateButtons();
-
+let mainNav = new Nav('mainNav', true, ['Games', 'Characters', 'this is a test'], ['games', 'characters', 'test'], 'Games');
 
 let gameNav = new Section(false, ['More Info', 'Robot Masters'])
-let games = new Section(true);
+let games = new Section('games', true);
+games.open = 'my new open'
 let game = new Section (false);
 let moreInfo = new Section (false);
 let robMas = new Section (false);
 
-const mainButtons = ['Games', 'Characters'];
-const gamesButtons = ['More Info', 'Robot Masters', 'Power Ups']
 
-// // Function for generating HTML for different sections. Calls appropriate HTML generator functions based on 'section' and 'id'.
-// function generateHTML(section, id) {
-//     switch (section) {
-//         case games:
-//             generateGamesHTML();
-//             break;
-    
-//         case game:
-//             generateGameHTML(id);
-//             break;
-
-//         case robMas:
-//             generateRobMasHTML(id);
-
-//         // default:
-//         //     break;
-//     }
-// }
-
-// function generateGamesHTML() {
-//     let content = '';
-//     const open = 'Games Content Open';
-//     const close = 'Games Content Open';
-//     let body = '';
-
-//     for (let i in mmData.games) {
-//         //i is is the key for each game
-//         let game = mmData.games[i];
-//         contentBody += game.title;
-//     }
-
-//     content = contentCombine(body, open, close);
-//     return content;
-// }
-
-// function generategameHTML(id) {
-//     const gameContent;
-// }
 
 // 
 // //
@@ -138,10 +116,21 @@ const gamesButtons = ['More Info', 'Robot Masters', 'Power Ups']
 // //
 //
 
-function display(target, section, id) {
-
+function displayByID(id) {
+    switch (id) {
+        // case 'mainNav':
+        //     mainNav.display();
+        //     break;
+        case 'games':
+            games.target.innerHTML = games.combined;
+            games.display();
+            console.log('display games')
+            break;
+    
+        default:
+            break;
+    }
 }
-
 
 // 
 // Get data from JSON file.
@@ -157,5 +146,6 @@ xhr.onload = function() {
         mmData = JSON.parse(xhr.responseText);
         console.log(mmData);
         mainNav.display();
+        // games.display();
     }
 } // end onload
