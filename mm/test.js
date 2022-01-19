@@ -1,15 +1,22 @@
 'use strict';
 let mmData; 
 let state = ['mainNav', 'games'];
+let gameSections = [];
+
+
+// 
+// Section Classes
+// 
+
 
 // Section Class
 class Section {
     constructor(targetID, visible, level) {
         this.targetID = targetID;
         this.visible = visible;
-        this.body = 'content body';
-        this.open = 'content open';
-        this.close = 'content close';
+        this.body = '';
+        this.open = '';
+        this.close = '';
         this.level = 0;
         this.target = document.getElementById(targetID);
     }
@@ -97,38 +104,18 @@ class Album extends Section {
     }
 }
 
-// //  GameSec Class
-// class GameSec extends Section {
-//     constructor(targetID, visible) {
-//         // Calls constructor of parent class (Section)
-//         super(targetID, visible);
-//         this.open = `
-//             <div id="${targetID}" class="album py-5 bg-light">
-//                 <div class="container">
-//                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">`
-//         this.close = `
-//                     </div>
-//                 </div>
-//             </div>`
-//     }
-// }
-
-// 
-// //
-// Set up Section Objects
-// //
-//
 
 // 
 // Section objects
 // 
 
+
 // Main Nav
 let mainNav = new Nav('mainNav', true, 0, ['Games', 'Characters', 'this is a test'], ['games', 'characters', 'test'], 'Games');
-
+// Game Nav
 let gameNav = new Nav('gameNav', true, 2, ['More Info', 'Robot Masters'], ['info', 'robMas'], 'More Info')
-
-let game = new Section ('game', false, 1);
+// game
+// let game = new Section ('game', false, 1);
 let moreInfo = new Section (false);
 let robMas = new Section (false);
 let characters = new Section('characters', false, 0);
@@ -176,6 +163,73 @@ function generateGamesHTML() {
     }
 }
 
+// Create Game containers and cards
+function createGameContainers() {
+    let gameContainer = document.getElementById('game');
+    let cont = '';
+    let gameIDs = [];
+
+    // Create game containers/cards
+    for (let i in mmData.games) {
+        //i is is the key for each game
+       let game = mmData.games[i];
+       gameIDs.push(game.id);
+       cont += `<!-- ${game.title} -->
+       <div class="container" id="${game.id}">${game.title}</div> 
+       <!-- End Header/Nav -->`
+    }
+    // Set HTML for game containers
+    gameContainer.innerHTML = cont;
+
+    for (let i = 0; i < gameIDs.length; i++) {
+        let cont = ''
+        let gameId = gameIDs[i];
+        let game = mmData.games[gameId];
+        let consoles;
+        if (game.consoles) {
+            consoles = game.consoles;
+        }
+        else {
+            consoles = game.console;
+        }
+        let newGame = new Section(gameId, false, 0);
+        console.log(gameId)
+        cont += `<div class="container py-3 my-3">
+
+        <div class="row g-5 align-items-center justify-content-center">
+          <!-- ${gameId} Image -->
+          <div class="col-12 col-md-6">
+            <div class="card shadow-sm">
+              <img src="images/${gameId}.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+          <!-- ${gameId} Header/Description -->
+          
+          
+          <div class="col-12 col-md-6">
+            <h1 class="display-4 fw-normal">${game.title}</h1>
+            <p class="lead fw-normal">${game.description}</p>
+
+            <button type="button" class="btn btn-sm btn-secondary">Original Release Date: ${game.releaseYear}</button>
+            <button type="button" class="btn btn-sm btn-secondary">Platform: ${consoles}</button>
+          </div>
+        </div>
+      </div> <!-- End MM1 Section -->`
+        
+      newGame.body = cont;
+      newGame.target.innerHTML = newGame.combined;
+      document.getElementById(gameId).innerHTML = cont;
+      gameSections.push(newGame);
+    }
+    console.log(gameSections)
+    
+}
+
+function createGameCards() {
+    
+}
+
+
 function displayGame(gameBtn) {
     // returns the id of the game to be displayed (e.g. 'mm1')
     let gameId = gameBtn.id.slice(0, -3);
@@ -206,35 +260,8 @@ function displayByID(id) {
 }
 
 
-// Create Game containers
-// let gameHTML = `<div class="container" id="gameNav"></div> <!-- End Game Nav -->`
-// let content;
-// content +=
-//         `<div class="container py-3 my-3">
 
-//         <div class="row g-5 align-items-center justify-content-center">
-//           <!-- ${gameId} Image -->
-//           <div class="col-12 col-md-6">
-//             <div class="card shadow-sm">
-//               <img src="images/${gameId}.png" class="img-fluid" alt="...">
-//             </div>
-//           </div>
-//           <!-- ${gameId} Header/Description -->
-          
-          
-//           <div class="col-12 col-md-6">
-//             <h1 class="display-4 fw-normal">${game.title}</h1>
-//             <p class="lead fw-normal">${game.description}</p>
 
-//             <button type="button" class="btn btn-sm btn-secondary">Original Release Date: ${game.releaseYear}</button>
-//             <button type="button" class="btn btn-sm btn-secondary">Platform: ${consoles}</button>
-//           </div>
-//         </div>
-//       </div> <!-- End MM1 Section -->`
-
-// 
-// Get data from JSON file.
-// 
 
 let xhr = new XMLHttpRequest();
 xhr.open('GET', "megaman.json", true);
@@ -246,5 +273,6 @@ xhr.onload = function() {
         mmData = JSON.parse(xhr.responseText);
         generateGamesHTML();
         mainNav.display();
+        createGameContainers()
     }
 } // end onload
