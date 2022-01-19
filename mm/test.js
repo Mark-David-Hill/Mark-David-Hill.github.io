@@ -1,29 +1,22 @@
 'use strict';
-
-// 
-// //
-// Initialize
-// //
-// 
-
 let mmData; 
 let state = ['mainNav', 'games'];
 
-
-
 // Section Class
 class Section {
-    constructor(targetID, visible) {
+    constructor(targetID, visible, level) {
         this.targetID = targetID;
         this.visible = visible;
         this.body = 'content body';
         this.open = 'content open';
         this.close = 'content close';
+        this.level = 0;
         this.target = document.getElementById(targetID);
     }
     get combined() {
         return this.open + this.body + this.close;
     }
+    
     display () {
         console.log('Display ' + this.targetID)
         // this.target.innerHTML = this.combined;
@@ -37,9 +30,9 @@ class Section {
 
 //  Nav Class
 class Nav extends Section {
-    constructor(targetID, visible, sections, sectionIDs, defaultActive) {
+    constructor(targetID, visible, level, sections, sectionIDs, defaultActive) {
         // Calls constructor of parent class (Section)
-        super(targetID, visible);
+        super(targetID, visible, level);
         this.sections = sections;
         this.sectionIDs = sectionIDs;
         this.active = defaultActive;
@@ -90,9 +83,9 @@ class Nav extends Section {
 
 //  Album Class
 class Album extends Section {
-    constructor(targetID, visible) {
+    constructor(targetID, visible, level) {
         // Calls constructor of parent class (Section)
-        super(targetID, visible);
+        super(targetID, visible, level);
         this.open = `
             <div id="${targetID}" class="album py-5 bg-light">
                 <div class="container">
@@ -101,39 +94,24 @@ class Album extends Section {
                     </div>
                 </div>
             </div>`
-        // this.bindClick();
     }
-    // Generate HTML for the body of the Nav buttons
-    // generateButtons() {
-    //     let cont = '';
-        
-    //     for (let i = 0; i < this.sections.length; i++) {
-    //         let sectionID = this.sectionIDs[i];
-    //         let section = this.sections[i];
-    //         if (this.sections[i] === this.active) {
-    //             cont += `<li class="nav-item"><a id="${sectionID}Btn" href="#" class="nav-link active" aria-current="page">${section}</a></li>`
-    //         }
-    //         else {
-    //             cont += `<li class="nav-item"><a id="${sectionID}Btn" href="#" class="nav-link" aria-current="page">${section}</a></li>`
-    //         }
-    //     }
-    //     return cont;
-    // }
-    // Set up click events (Not working yet)
-    // bindClick() {
-    //     for (let i = 0; i < this.sections.length; i++) {
-    //         // Create click events
-    //         let sectionID = this.sectionIDs[i];
-    //         let btnID = sectionID + 'Btn'
-    //         document.getElementById(btnID).addEventListener("click", function() {
-    //             console.log('clicked a button');
-    //             displayByID(sectionID);
-    //         });
-    //         console.log('set up click event')
-    //     }
-        
-    // }
 }
+
+// //  GameSec Class
+// class GameSec extends Section {
+//     constructor(targetID, visible) {
+//         // Calls constructor of parent class (Section)
+//         super(targetID, visible);
+//         this.open = `
+//             <div id="${targetID}" class="album py-5 bg-light">
+//                 <div class="container">
+//                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">`
+//         this.close = `
+//                     </div>
+//                 </div>
+//             </div>`
+//     }
+// }
 
 // 
 // //
@@ -146,19 +124,22 @@ class Album extends Section {
 // 
 
 // Main Nav
-let mainNav = new Nav('mainNav', true, ['Games', 'Characters', 'this is a test'], ['games', 'characters', 'test'], 'Games');
+let mainNav = new Nav('mainNav', true, 0, ['Games', 'Characters', 'this is a test'], ['games', 'characters', 'test'], 'Games');
 
-let gameNav = new Section(false, ['More Info', 'Robot Masters'])
+let gameNav = new Nav('gameNav', true, 2, ['More Info', 'Robot Masters'], ['info', 'robMas'], 'More Info')
 
-let game = new Section (false);
+let game = new Section ('game', false, 1);
 let moreInfo = new Section (false);
 let robMas = new Section (false);
+let characters = new Section('characters', false, 0);
+characters.open = 'Mega Man, Proto Man, etc.'
+characters.target.innerHTML = characters.combined;
 
 // 
 // games section
 // 
 
-let games = new Album('games', true);
+let games = new Album('games', true, 1);
 // Display all games
 function generateGamesHTML() {
     let cont = "";
@@ -196,7 +177,10 @@ function generateGamesHTML() {
 }
 
 function displayGame(gameBtn) {
-    console.log('display game: ' + gameBtn);
+    // returns the id of the game to be displayed (e.g. 'mm1')
+    let gameId = gameBtn.id.slice(0, -3);
+    let game = mmData.games[gameId];
+    console.log(game);
 }
 
 // 
@@ -221,6 +205,33 @@ function displayByID(id) {
     }
 }
 
+
+// Create Game containers
+// let gameHTML = `<div class="container" id="gameNav"></div> <!-- End Game Nav -->`
+// let content;
+// content +=
+//         `<div class="container py-3 my-3">
+
+//         <div class="row g-5 align-items-center justify-content-center">
+//           <!-- ${gameId} Image -->
+//           <div class="col-12 col-md-6">
+//             <div class="card shadow-sm">
+//               <img src="images/${gameId}.png" class="img-fluid" alt="...">
+//             </div>
+//           </div>
+//           <!-- ${gameId} Header/Description -->
+          
+          
+//           <div class="col-12 col-md-6">
+//             <h1 class="display-4 fw-normal">${game.title}</h1>
+//             <p class="lead fw-normal">${game.description}</p>
+
+//             <button type="button" class="btn btn-sm btn-secondary">Original Release Date: ${game.releaseYear}</button>
+//             <button type="button" class="btn btn-sm btn-secondary">Platform: ${consoles}</button>
+//           </div>
+//         </div>
+//       </div> <!-- End MM1 Section -->`
+
 // 
 // Get data from JSON file.
 // 
@@ -233,9 +244,7 @@ xhr.send();
 xhr.onload = function() {
     if(xhr.status === 200) {
         mmData = JSON.parse(xhr.responseText);
-        console.log(mmData);
         generateGamesHTML();
         mainNav.display();
-        // games.display();
     }
 } // end onload
