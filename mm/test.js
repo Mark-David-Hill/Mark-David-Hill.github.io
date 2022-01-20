@@ -3,11 +3,53 @@ let mmData;
 let state = ['mainNav', 'games'];
 let gameSections = [];
 
+// 
+// Levels and Display
+// 
+
+class Level {
+    constructor(lvl, visible) {
+        this.lvl = lvl;
+        this.visible = visible;
+        // this.target = document.getElementById(targetID);
+    }
+    get combined() {
+        return this.open + this.body + this.close;
+    }
+    
+    display () {
+        // console.log('Display ' + this.targetID)
+        // // this.target.innerHTML = this.combined;
+        // this.target.style.display = 'block';
+    }
+    hide () {
+        // console.log('Hide')
+        // this.target.style.display = 'none';
+    }
+}
+
+let level0 = new Level (0, true);
+let level1 = new Level (1, true);
+let level2 = new Level (2, false);
+let level3 = new Level (2, false);
+let level4 = new Level (2, false);
+
+
+let Display = {
+    levels: [],
+    show: function() {
+        
+    },
+    hide: function() {
+
+    }
+}
+Display.levels.push(level0, level1, level2, level3, level4)
+
 
 // 
 // Section Classes
 // 
-
 
 // Section Class
 class Section {
