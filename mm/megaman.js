@@ -100,7 +100,7 @@ document.getElementById('gamesBtn').addEventListener("click", function() {
         document.getElementById('gameContainer').style.display = none;
         // Change text of the games button
         document.getElementById('gamesBtn').innerHTML = "Games"
-        console.log("Games")
+        // console.log("Games")
     }
 });
 
@@ -112,8 +112,10 @@ function displayGame(btn) {
     // returns the id of the game to be displayed (e.g. 'mm1')
     let gameId = btn.id.slice(0, -3);
     let game = mmData.games[gameId];
+    let gameNum = gameId.substring(2);
+    let robMas = game.robotMasters;
 
-    console.log(game.id)
+    // console.log('game Num: ', gameNum)
 
     let consoles;
 
@@ -146,6 +148,37 @@ function displayGame(btn) {
           </div>
         </div>
       </div> <!-- End MM1 Section -->`
+
+    // Robot Master Section Open
+    content += `
+    <!-- Robot Masters Section -->
+    <div class="container py-3 my-3">
+
+      <div class="row g-5 align-items-center justify-content-center">`
+      
+      
+    // Robot Master Section Body
+    for (let i = 0; i < robMas.length; i++) {
+        rob = robMas[i];
+        // console.log('the current rob is ', rob.reference)
+        content += `
+        <!-- ${rob.name} -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="card">
+            <img src="images/${gameNum}/${rob.reference}Face.png" class="card-img-top rounded" alt="...">
+            <div class="card-body text-center">
+              <a href="#" class="nav-link active" aria-current="page">${rob.name}</a>
+            </div>
+          </div>
+        </div> <!-- End ${rob.name} -->` 
+    }
+    
+    
+    // Robot Master Section Close
+    content += `
+    </div>
+    </div> <!-- End Robot Masters Section -->`
+      
 
     // Hide games
     document.getElementById('gamesAlbum').style.display = "none";
