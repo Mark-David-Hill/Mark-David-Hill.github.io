@@ -138,7 +138,7 @@
             "robotMasters": [
                 {
                     "reference":"needle",
-                    "name":"Needle",
+                    "name":"Needle Man",
                     "id":"DWN. 017"
                 },
                 {
@@ -201,43 +201,43 @@
             ],
             "robotMasters": [
                 {
-                    "reference":"aaa",
-                    "name":"aaa",
+                    "reference":"bright",
+                    "name":"Bright Man",
                     "id":"DWN. 025"
                 },
                 {
-                    "reference":"bbb",
-                    "name":"bbb Man",
+                    "reference":"toad",
+                    "name":"Toad Man",
                     "id":"DWN. 026"
                 },
                 {
-                    "reference":"ccc",
-                    "name":"ccc Man",
+                    "reference":"drill",
+                    "name":"Drill Man",
                     "id":"DWN. 027"
                 },
                 {
-                    "reference":"ddd",
-                    "name":"ddd Man",
+                    "reference":"pharaoh",
+                    "name":"Pharaoh Man",
                     "id":"DWN. 028"
                 },
                 {
-                    "reference":"eee",
-                    "name":"eee Man",
+                    "reference":"ring",
+                    "name":"Ring Man",
                     "id":"DWN. 029"
                 },
                 {
-                    "reference":"fff",
-                    "name":"fff Man",
+                    "reference":"dust",
+                    "name":"Dust Man",
                     "id":"DWN. 030"
                 },
                 {
-                    "reference":"ggg",
-                    "name":"ggg Man",
+                    "reference":"dive",
+                    "name":"Dive Man",
                     "id":"DWN. 031"
                 },
                 {
-                    "reference":"hhh",
-                    "name":"hhh Man",
+                    "reference":"skull",
+                    "name":"Skull Man",
                     "id":"DWN. 032"
                 }
             ],
@@ -265,43 +265,43 @@
             ],
             "robotMasters": [
                 {
-                    "reference":"aaa",
-                    "name":"aaa",
+                    "reference":"gravity",
+                    "name":"Gravity Man",
                     "id":"DWN. 033"
                 },
                 {
-                    "reference":"bbb",
-                    "name":"bbb Man",
+                    "reference":"wave",
+                    "name":"Wave Man",
                     "id":"DWN. 034"
                 },
                 {
-                    "reference":"ccc",
-                    "name":"ccc Man",
+                    "reference":"stone",
+                    "name":"Stone Man",
                     "id":"DWN. 035"
                 },
                 {
-                    "reference":"ddd",
-                    "name":"ddd Man",
+                    "reference":"gyro",
+                    "name":"Gyro Man",
                     "id":"DWN. 036"
                 },
                 {
-                    "reference":"eee",
-                    "name":"eee Man",
+                    "reference":"star",
+                    "name":"Star Man",
                     "id":"DWN. 037"
                 },
                 {
-                    "reference":"fff",
-                    "name":"fff Man",
+                    "reference":"charge",
+                    "name":"Charge Man",
                     "id":"DWN. 038"
                 },
                 {
-                    "reference":"ggg",
-                    "name":"ggg Man",
+                    "reference":"napalm",
+                    "name":"Napalm Man",
                     "id":"DWN. 039"
                 },
                 {
-                    "reference":"hhh",
-                    "name":"hhh Man",
+                    "reference":"crystal",
+                    "name":"Crystal Man",
                     "id":"DWN. 040"
                 }
             ],
@@ -329,43 +329,43 @@
             ],
             "robotMasters": [
                 {
-                    "reference":"aaa",
-                    "name":"aaa",
+                    "reference":"blizzard",
+                    "name":"Blizzard Man",
                     "id":"DWN. 041"
                 },
                 {
-                    "reference":"bbb",
-                    "name":"bbb Man",
+                    "reference":"centaur",
+                    "name":"Centaur Man",
                     "id":"DWN. 042"
                 },
                 {
-                    "reference":"ccc",
-                    "name":"ccc Man",
+                    "reference":"Flame",
+                    "name":"flame Man",
                     "id":"DWN. 043"
                 },
                 {
-                    "reference":"ddd",
-                    "name":"ddd Man",
+                    "reference":"knight",
+                    "name":"Knight Man",
                     "id":"DWN. 044"
                 },
                 {
-                    "reference":"eee",
-                    "name":"eee Man",
+                    "reference":"plant",
+                    "name":"Plant Man",
                     "id":"DWN. 045"
                 },
                 {
-                    "reference":"fff",
-                    "name":"fff Man",
+                    "reference":"tomahawk",
+                    "name":"Tomahawk Man",
                     "id":"DWN. 046"
                 },
                 {
-                    "reference":"ggg",
-                    "name":"ggg Man",
+                    "reference":"wind",
+                    "name":"Wind Man",
                     "id":"DWN. 047"
                 },
                 {
-                    "reference":"hhh",
-                    "name":"hhh Man",
+                    "reference":"yamato",
+                    "name":"Yamato Man",
                     "id":"DWN. 048"
                 }
             ],
@@ -393,43 +393,43 @@
             ],
             "robotMasters": [
                 {
-                    "reference":"aaa",
-                    "name":"aaa",
+                    "reference":"freeze",
+                    "name":"Freeze",
                     "id":"DWN. 049"
                 },
                 {
-                    "reference":"bbb",
-                    "name":"bbb Man",
+                    "reference":"junk",
+                    "name":"Junk Man",
                     "id":"DWN. 050"
                 },
                 {
-                    "reference":"ccc",
-                    "name":"ccc Man",
+                    "reference":"burst",
+                    "name":"Burst Man",
                     "id":"DWN. 051"
                 },
                 {
-                    "reference":"ddd",
-                    "name":"ddd Man",
+                    "reference":"cloud",
+                    "name":"Cloud Man",
                     "id":"DWN. 052"
                 },
                 {
-                    "reference":"eee",
-                    "name":"eee Man",
+                    "reference":"spring",
+                    "name":"Spring Man",
                     "id":"DWN. 053"
                 },
                 {
-                    "reference":"fff",
-                    "name":"fff Man",
+                    "reference":"slash",
+                    "name":"Slash Man",
                     "id":"DWN. 054"
                 },
                 {
-                    "reference":"ggg",
-                    "name":"ggg Man",
+                    "reference":"shade",
+                    "name":"Shade Man",
                     "id":"DWN. 055"
                 },
                 {
-                    "reference":"hhh",
-                    "name":"hhh Man",
+                    "reference":"turbo",
+                    "name":"Turbo Man",
                     "id":"DWN. 056"
                 }
             ],
@@ -458,43 +458,43 @@
             ],
             "robotMasters": [
                 {
-                    "reference":"aaa",
-                    "name":"aaa",
+                    "reference":"tengu",
+                    "name":"Tengu Man",
                     "id":"DWN. 057"
                 },
                 {
-                    "reference":"bbb",
-                    "name":"bbb Man",
+                    "reference":"astro",
+                    "name":"Astro Man",
                     "id":"DWN. 058"
                 },
                 {
-                    "reference":"ccc",
-                    "name":"ccc Man",
+                    "reference":"sword",
+                    "name":"Sword Man",
                     "id":"DWN. 059"
                 },
                 {
-                    "reference":"ddd",
-                    "name":"ddd Man",
+                    "reference":"clown",
+                    "name":"Clown Man",
                     "id":"DWN. 060"
                 },
                 {
-                    "reference":"eee",
-                    "name":"eee Man",
+                    "reference":"search",
+                    "name":"Search Man",
                     "id":"DWN. 061"
                 },
                 {
-                    "reference":"fff",
-                    "name":"fff Man",
+                    "reference":"frost",
+                    "name":"Frost Man",
                     "id":"DWN. 062"
                 },
                 {
-                    "reference":"ggg",
-                    "name":"ggg Man",
+                    "reference":"grenade",
+                    "name":"Grenade Man",
                     "id":"DWN. 063"
                 },
                 {
-                    "reference":"hhh",
-                    "name":"hhh Man",
+                    "reference":"aqua",
+                    "name":"Aqua Man",
                     "id":"DWN. 064"
                 }
             ],
@@ -523,43 +523,43 @@
             ],
             "robotMasters": [
                 {
-                    "reference":"aaa",
-                    "name":"aaa",
+                    "reference":"concrete",
+                    "name":"Concrete Man",
                     "id":"DWN. 065"
                 },
                 {
-                    "reference":"bbb",
-                    "name":"bbb Man",
+                    "reference":"tornado",
+                    "name":"Tornado Man",
                     "id":"DWN. 066"
                 },
                 {
-                    "reference":"ccc",
-                    "name":"ccc Man",
+                    "reference":"splash",
+                    "name":"Splash Woman",
                     "id":"DWN. 067"
                 },
                 {
-                    "reference":"ddd",
-                    "name":"ddd Man",
+                    "reference":"plug",
+                    "name":"Plug Man",
                     "id":"DWN. 068"
                 },
                 {
-                    "reference":"eee",
-                    "name":"eee Man",
+                    "reference":"jewel",
+                    "name":"Jewel Man",
                     "id":"DWN. 069"
                 },
                 {
-                    "reference":"fff",
-                    "name":"fff Man",
+                    "reference":"hornet",
+                    "name":"Hornet Man",
                     "id":"DWN. 070"
                 },
                 {
-                    "reference":"ggg",
-                    "name":"ggg Man",
+                    "reference":"magma",
+                    "name":"Magma Man",
                     "id":"DWN. 071"
                 },
                 {
-                    "reference":"hhh",
-                    "name":"hhh Man",
+                    "reference":"galaxy",
+                    "name":"Galaxy Man",
                     "id":"DWN. 072"
                 }
             ],
@@ -588,43 +588,43 @@
             ],
             "robotMasters": [
                 {
-                    "reference":"aaa",
-                    "name":"aaa",
+                    "reference":"blade",
+                    "name":"Blade",
                     "id":"DWN. 073"
                 },
                 {
-                    "reference":"bbb",
-                    "name":"bbb Man",
+                    "reference":"pump",
+                    "name":"Pump Man",
                     "id":"DWN. 074"
                 },
                 {
-                    "reference":"ccc",
-                    "name":"ccc Man",
+                    "reference":"commando",
+                    "name":"Commando Man",
                     "id":"DWN. 075"
                 },
                 {
-                    "reference":"ddd",
-                    "name":"ddd Man",
+                    "reference":"chill",
+                    "name":"Chill Man",
                     "id":"DWN. 076"
                 },
                 {
-                    "reference":"eee",
-                    "name":"eee Man",
+                    "reference":"sheep",
+                    "name":"Sheep Man",
                     "id":"DWN. 077"
                 },
                 {
-                    "reference":"fff",
-                    "name":"fff Man",
+                    "reference":"strike",
+                    "name":"Strike Man",
                     "id":"DWN. 078"
                 },
                 {
-                    "reference":"ggg",
-                    "name":"ggg Man",
+                    "reference":"nitro",
+                    "name":"Nitro Man",
                     "id":"DWN. 079"
                 },
                 {
-                    "reference":"hhh",
-                    "name":"hhh Man",
+                    "reference":"solar",
+                    "name":"Solar Man",
                     "id":"DWN. 080"
                 }
             ],
@@ -653,43 +653,43 @@
             ],
             "robotMasters": [
                 {
-                    "reference":"aaa",
-                    "name":"aaa",
+                    "reference":"block",
+                    "name":"Block Man",
                     "id":"DWN. 081"
                 },
                 {
-                    "reference":"bbb",
-                    "name":"bbb Man",
+                    "reference":"fuse",
+                    "name":"Fuse Man",
                     "id":"DWN. 082"
                 },
                 {
-                    "reference":"ccc",
-                    "name":"ccc Man",
+                    "reference":"blast",
+                    "name":"Blast Man",
                     "id":"DWN. 083"
                 },
                 {
-                    "reference":"ddd",
-                    "name":"ddd Man",
+                    "reference":"acid",
+                    "name":"Acid Man",
                     "id":"DWN. 084"
                 },
                 {
-                    "reference":"eee",
-                    "name":"eee Man",
+                    "reference":"tundra",
+                    "name":"Tundra Man",
                     "id":"DWN. 085"
                 },
                 {
-                    "reference":"fff",
-                    "name":"fff Man",
+                    "reference":"torch",
+                    "name":"Torch Man",
                     "id":"DWN. 086"
                 },
                 {
-                    "reference":"ggg",
-                    "name":"ggg Man",
+                    "reference":"impact",
+                    "name":"Impact Man",
                     "id":"DWN. 087"
                 },
                 {
-                    "reference":"hhh",
-                    "name":"hhh Man",
+                    "reference":"bounce",
+                    "name":"Bounce Man",
                     "id":"DWN. 088"
                 }
             ],
