@@ -99,6 +99,7 @@ document.getElementById('gamesBtn').addEventListener("click", function() {
         document.getElementById('gameContainer').innerHTML = "";
         document.getElementById('gameContainer').style.display = none;
         // Change text of the games button
+        document.getElementById('gamesBtn').style.display = none;
         document.getElementById('gamesBtn').innerHTML = "Games"
         // console.log("Games")
     }
@@ -188,6 +189,7 @@ function displayGame(btn) {
     document.getElementById('gameContainer').style.display = 'block';
     // Change text of the games button
     document.getElementById('gamesBtn').innerHTML = "&crarr; Games";
+    document.getElementById('gamesBtn').style.display = 'block';
 }
 
 // Display Robot Masters for specific game
