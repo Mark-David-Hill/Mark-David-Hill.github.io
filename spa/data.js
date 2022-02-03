@@ -1,3 +1,7 @@
+// 
+// Works (only prints error to console, doesn't display anything)
+// 
+
 // Get data from JSON file.
 function getData(fileName, endFunction) {
     // Variable for storing returned JSON data
@@ -16,6 +20,7 @@ function getData(fileName, endFunction) {
         }
         else {
             console.log('XMLHttp Request status: ' + xhr.status);
+            console.log('JSON data could not be loaded')
             return (null);
         }
     } // end onload
