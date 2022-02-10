@@ -100,12 +100,31 @@ let ties = 0;
 function updateScore(winner) {
     if (winner === 'player') {
         pScore += 1;
+        document.getElementById("pWin").classList.add("win");
+        document.getElementById("pWin").classList.remove("lose");
+        document.getElementById("pWin").classList.remove("tie");
+        document.getElementById("cWin").classList.add("lose");
+        document.getElementById("cWin").classList.remove("win");
+        document.getElementById("cWin").classList.remove("tie");
+        
     }
     else if (winner === 'cpu') {
         cScore += 1;
+        document.getElementById("pWin").classList.add("lose");
+        document.getElementById("pWin").classList.remove("win");
+        document.getElementById("pWin").classList.remove("tie");
+        document.getElementById("cWin").classList.add("win");
+        document.getElementById("cWin").classList.remove("lose");
+        document.getElementById("cWin").classList.remove("tie");
     }
     else {
         ties += 1;
+        document.getElementById("pWin").classList.remove("lose");
+        document.getElementById("pWin").classList.remove("win");
+        document.getElementById("pWin").classList.add("tie");
+        document.getElementById("cWin").classList.remove("win");
+        document.getElementById("cWin").classList.remove("lose");
+        document.getElementById("cWin").classList.add("tie");
     }
     updateScoreDisplay(pScore, cScore, ties);
 }
