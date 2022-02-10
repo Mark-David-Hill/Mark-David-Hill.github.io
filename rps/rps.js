@@ -137,11 +137,9 @@ function displayThrows(player, cpu) {
         else if(hand === 'scissors') {
             link = scissorsImg;
         }
+        element.src = `${link}`;
         if(flip) {
-            element.innerHTML = `<img src="${link}" style="transform: scaleX(-1);"</img>`;
-        }
-        else {
-            element.innerHTML = `<img src="${link}"</img>`;
+            element.style = "transform: scaleX(-1);";
         }
     }
 
