@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <!-- Score -->
+    <div>
+        <!-- Player Score -->
+        <div>
+            <p>Player Score:</p>
+            <p class="score player">0</p>
+        </div>
+        <!-- CPU Score -->
+        <div>
+            <p>CPU Score:</p>
+            <p class="score cpu">0</p>
+        </div>
+        <!-- Ties -->
+        <div>
+            <p>Ties:</p>
+            <p class="score ties">0</p>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div id="buttons"> 
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+
+    <!-- Throws -->
+    <div>
+        <!-- Player Throw -->
+        <div>
+            <p>Player Hand:</p>
+            <p id="pHand"></p>
+        </div>
+        <!-- CPU Throw -->
+        <div>
+            <p>CPU Hand:</p>
+            <p id="cHand"></p>
+        </div>
+    </div>
+
+    <script src="rps.js"></script>
+</body>
+</html>
