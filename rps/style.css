@@ -15,3 +15,7 @@
 .x-flip {
     transform: scaleX(-1);
 }
+
+.main-container {
+    max-width: 400px;
+}

@@ -12,81 +12,77 @@
 <body>
     <!-- Main -->
     <main>
-
-        <!--  -->
-        <!-- Title -->
-        <!--  -->
-        
-        <div class="text-center">
-            <div class="my-xl-3">
-              <h1 class="display-4 fw-normal">Rock Paper Scissors</h1>
+        <div class="container main-container">
+            <!--  -->
+            <!-- Title -->
+            <!--  -->
+            
+            <div class="text-center">
+                <div class="my-xl-3">
+                <h1 class="display-4 fw-normal">Rock Paper Scissors</h1>
+                </div>
             </div>
-        </div>
 
         <!--  -->
         <!-- Header -->
         <!--  -->
 
-        <div class="container">
-            <header class="d-flex justify-content-center py-3">
-                <!-- Score -->
-                <div class="row">
-                    <!-- Player Score -->
-                    <div class="col">
-                        <div class="card">
-                            <ul class="list-group list-group-flush text-center">
-                                <li class="list-group-item"><span>Player Score:</span></li>
-                                <li class="list-group-item" style="background-color: rgb(162, 255, 162);"><span class="score player">0</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Ties -->
-                    <div class="col">
-                        <div class="card">
-                            <ul class="list-group list-group-flush text-center">
-                                <li class="list-group-item" ><span>Ties:</span></li>
-                                <li class="list-group-item" style="background-color: rgb(253, 255, 123);"><span class="score ties">0</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- CPU Score -->
-                    <div class="col">
-                        <div class="card">
-                            <ul class="list-group list-group-flush text-center">
-                                <li class="list-group-item"><span>CPU Score:</span></li>
-                                <li class="list-group-item" style="background-color: rgb(253, 146, 131);"><span class="score cpu">0</span></li>
-                            </ul>
-                        </div>
+        <header class="d-flex justify-content-center py-3">
+            <!-- Score -->
+            <div class="row">
+                <!-- Player Score -->
+                <div class="col">
+                    <div class="card">
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item"><span>Player Score:</span></li>
+                            <li class="list-group-item" style="background-color: rgb(162, 255, 162);"><span class="score player">0</span></li>
+                        </ul>
                     </div>
                 </div>
-            </header>
-        </div>
+                <!-- Ties -->
+                <div class="col">
+                    <div class="card">
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item" ><span>Ties:</span></li>
+                            <li class="list-group-item" style="background-color: rgb(253, 255, 123);"><span class="score ties">0</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- CPU Score -->
+                <div class="col">
+                    <div class="card">
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item"><span>CPU Score:</span></li>
+                            <li class="list-group-item" style="background-color: rgb(253, 146, 131);"><span class="score cpu">0</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
 
         <!--  -->
         <!-- Game -->
         <!--  -->
 
-        <div class="container">
-            <!-- Buttons -->
-            <div id="buttons" class="container">
-                <div class="row text-center">
-                    <div class="col">
-                        <button id="rock" type="button" class="btn btn-primary btn-lg">Rock</button>
-                    </div>
-                    <div class="col">
-                        <button id="paper" type="button" class="btn btn-primary btn-lg">Paper</button>
-                    </div>
-                    <div class="col">
-                        <button id="scissors" type="button" class="btn btn-primary btn-lg">Scissors</button>
-                    </div>
-                </div> 
-            </div>
+        <!-- Buttons -->
+        <div id="buttons" class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <button id="rock" type="button" class="btn btn-primary btn-lg">Rock</button>
+                </div>
+                <div class="col">
+                    <button id="paper" type="button" class="btn btn-primary btn-lg">Paper</button>
+                </div>
+                <div class="col">
+                    <button id="scissors" type="button" class="btn btn-primary btn-lg">Scissors</button>
+                </div>
+            </div> 
         </div>
 
         <!-- Throws -->
-        <div class="container m-4">
+        <div class="d-flex justify-content-center py-3">
             <!-- Player Throw -->
-            <div class="row">
+            <div class="row m-4">
                 <!-- Player Hand -->
                 <div class="col text-center">
                     <div id="pWin" class="card">
@@ -107,8 +103,6 @@
                 </div>
             </div>
         </div>
-        
-        
     </main>
     
     
