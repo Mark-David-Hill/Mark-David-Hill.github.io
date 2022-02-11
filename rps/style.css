@@ -11,3 +11,7 @@
 #pWin, #cWin {
     max-width: 150px;
 }
+
+.x-flip {
+    transform: scaleX(-1);
+}

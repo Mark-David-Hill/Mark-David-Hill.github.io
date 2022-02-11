@@ -1,8 +1,5 @@
-// To Do:
-// -Display player hand and cpu hand with images?
-// -Make it look nicer?
+// To Do
 // -Add animations?
-
 
 // 
 // Initialize
@@ -145,7 +142,7 @@ function displayThrows(player, cpu) {
     let cpuImg = '';
 
     // Set up throw image for either player or cpu (side = player or cpu)
-    let setImg = function(hand, element, flip) {
+    let setImg = function(hand, element) {
         let link = '';
         if(hand === 'rock') {
             link = rockImg;
@@ -157,13 +154,10 @@ function displayThrows(player, cpu) {
             link = scissorsImg;
         }
         element.src = `${link}`;
-        if(flip) {
-            element.style = "transform: scaleX(-1);";
-        }
     }
 
-    setImg(player, playerHand, false);
-    setImg(cpu, cpuHand, true);
+    setImg(player, playerHand);
+    setImg(cpu, cpuHand);
 }
 
 // Display Scores
