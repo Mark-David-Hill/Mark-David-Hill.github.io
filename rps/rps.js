@@ -39,23 +39,28 @@ let cpuThrow = function() {
 // Evaluation
 let evaluate = function(player, cpu) {
     let winner = '';
-    console.log('Player threw ' + player)
+    let winMessage = document.getElementById('winMessage');
+    console.log('Player threw ' + player);
+    let messages = ['You Win!', 'You Lose', 'Tie']
     console.log('cpu threw ' + cpu)
     displayThrows(player, cpu);
     // Tie
     if(player === cpu) {
         winner = 'tie';
+        winMessage.innerText = messages[2];
         updateScore(winner);
         return 'tie';
     }
     else if(player === 'rock') {
         if(cpu === 'paper') {
             winner = 'cpu'
+            winMessage.innerText = messages[1];
             updateScore(winner);
             return 'cpu wins'
         }
         else {
             winner = 'player'
+            winMessage.innerText = messages[0];
             updateScore(winner);
             return 'player wins'
         }
@@ -63,11 +68,13 @@ let evaluate = function(player, cpu) {
     else if(player === 'paper') {
         if(cpu === 'scissors') {
             winner = 'cpu'
+            winMessage.innerText = messages[1];
             updateScore(winner);
             return 'cpu wins'
         }
         else {
             winner = 'player'
+            winMessage.innerText = messages[0];
             updateScore(winner);
             return 'player wins'
         }
@@ -75,11 +82,13 @@ let evaluate = function(player, cpu) {
     else if(player === 'scissors') {
         if(cpu === 'rock') {
             winner = 'cpu'
+            winMessage.innerText = messages[1];
             updateScore(winner);
             return 'cpu wins'
         }
         else {
             winner = 'player'
+            winMessage.innerText = messages[0];
             updateScore(winner);
             return 'player wins'
         }
