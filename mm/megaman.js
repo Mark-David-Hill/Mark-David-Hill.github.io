@@ -143,9 +143,8 @@ function displayGame(btn) {
           <div class="col-12 col-md-6">
             <h1 class="display-4 fw-normal">${game.title}</h1>
             <p class="lead fw-normal">${game.description}</p>
-
-            <button type="button" class="btn btn-sm btn-secondary">Original Release Date: ${game.releaseYear}</button>
-            <button type="button" class="btn btn-sm btn-secondary">Platform: ${consoles}</button>
+            <button type="button" class="btn btn-sm btn-secondary disabled" style="cursor:default; background-color: #2b2f33;">Original Release Date: ${game.releaseYear}</button>
+            <button type="button" class="btn btn-sm btn-secondary disabled" style="cursor:default; background-color: #2b2f33;">Platform: ${consoles}</button>
           </div>
         </div>
       </div> <!-- End MM1 Section -->`
@@ -168,7 +167,7 @@ function displayGame(btn) {
           <div class="card">
             <img src="images/${gameNum}/${rob.reference}Face.png" class="card-img-top rounded" alt="...">
             <div class="card-body text-center">
-              <a href="#" class="nav-link active" aria-current="page">${rob.name}</a>
+              <p>${rob.name}</p>
             </div>
           </div>
         </div> <!-- End ${rob.name} -->` 
