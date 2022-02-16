@@ -175,7 +175,7 @@ function displayGame(btn) {
     // 
     content += `
     <!-- Mega Man Soccer -->
-    <div id="mms" style="display: none;" class="col-4">
+    <div id="mms" style="display: none;" class="col col-lg-4">
       <div class="card">
       <img id="mms" src="https://thumbs.gfycat.com/BasicFittingIlsamochadegu-max-1mb.gif" alt="Mega Man Soccer">
       </div>
