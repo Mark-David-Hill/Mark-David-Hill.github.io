@@ -160,18 +160,27 @@ function displayGame(btn) {
     // Robot Master Section Body
     for (let i = 0; i < robMas.length; i++) {
         rob = robMas[i];
-        // console.log('the current rob is ', rob.reference)
         content += `
         <!-- ${rob.name} -->
         <div class="col-6 col-sm-4 col-md-3 col-lg-2">
           <div class="card">
-            <img src="images/${gameNum}/${rob.reference}Face.png" class="card-img-top rounded" alt="...">
+            <img src="images/${gameNum}/${rob.reference}Face.png" class="card-img-top rounded" alt="..." id="${rob.reference}">
             <div class="card-body text-center">
               <p>${rob.name}</p>
             </div>
           </div>
         </div> <!-- End ${rob.name} -->` 
     }
+
+    // 
+    content += `
+    <!-- Mega Man Soccer -->
+    <div id="mms" style="display: none;" class="col-4">
+      <div class="card">
+      <img id="mms" src="https://thumbs.gfycat.com/BasicFittingIlsamochadegu-max-1mb.gif" alt="Mega Man Soccer">
+      </div>
+    </div>
+    `
     
     
     // Robot Master Section Close
@@ -212,6 +221,7 @@ function displayGameRobMas(game) {
             </div> <!-- End ${name} -->`
     }
     
+    
     // Display all games to the screen.
     document.getElementById('gameRobMas').innerHTML = content;
 
@@ -224,5 +234,29 @@ function displayGameRobMas(game) {
     }
 }
 
-// displayGame(mm1);
+//Easter egg click event
 
+// Add click event listener
+document.getElementsByTagName('main')[0].addEventListener("click", toggleEasterEgg);
+
+// Toggle easter egg image on/off
+function toggleEasterEgg(event) {
+  const element = event.target;
+  let image = document.getElementById('mms');
+  if (element.id === "strike") {
+    if (image.style.display === "none") {
+      image.style.display = "block"
+    }
+    else {
+      image.style.display = "none"
+    }
+    
+  }
+}
+
+
+// document.getElementById("divId").addEventListener("click", someFunction);
+
+// function someFunction(event) {
+//   console.log(event.target.id);
+// }
