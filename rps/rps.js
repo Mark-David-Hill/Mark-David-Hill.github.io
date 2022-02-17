@@ -1,5 +1,11 @@
 // To Do
 // -Add animations?
+//  -Have hand cards be flipped over at first, show faint preview of your throw on hover, then flip them when you actually click.
+// 
+// Note- it's not very visually interesting if the same result happens again. Need to reset cards before starting again. Have New Game button.
+// 
+// -Improve style
+// Refactor some code
 
 // 
 // Initialize
