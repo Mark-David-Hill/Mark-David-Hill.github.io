@@ -11,6 +11,8 @@
 // Initialize
 // 
 
+
+
 let initialize = function(...options) {
     console.log('rps.js start');
     options.forEach(id => {
@@ -110,33 +112,45 @@ let ties = 0;
 
 // Update Score
 function updateScore(winner) {
+    let pCard = document.getElementById('pWin');
+    let cCard = document.getElementById('cWin');
+    let pScoreDiv = document.getElementById('pScore');
+    let cScoreDiv = document.getElementById('cScore');
+
+    // addClass() adds the class of the result and removes other result classes.
+    // Result is 0, 1, or 2, corresponding to 'win', 'lose', and 'tie'
+    let addClass = function(element, result) {
+        let results = ['win', 'lose', 'tie']
+        for (let i = 0; i < results.length; i++) {
+            if (i === result) {
+                element.classList.add(results[i]);
+            }
+            else {
+                element.classList.remove(results[i]);
+            }
+        }
+    }
+
     if (winner === 'player') {
         pScore += 1;
-        document.getElementById("pWin").classList.add("win");
-        document.getElementById("pWin").classList.remove("lose");
-        document.getElementById("pWin").classList.remove("tie");
-        document.getElementById("cWin").classList.add("lose");
-        document.getElementById("cWin").classList.remove("win");
-        document.getElementById("cWin").classList.remove("tie");
-        
+        addClass(pCard, 0)
+        addClass(cCard, 1)
+        addClass(pScoreDiv, 0)
+        addClass(cScoreDiv, 1)
     }
     else if (winner === 'cpu') {
         cScore += 1;
-        document.getElementById("pWin").classList.add("lose");
-        document.getElementById("pWin").classList.remove("win");
-        document.getElementById("pWin").classList.remove("tie");
-        document.getElementById("cWin").classList.add("win");
-        document.getElementById("cWin").classList.remove("lose");
-        document.getElementById("cWin").classList.remove("tie");
+        addClass(cCard, 0)
+        addClass(pCard, 1)
+        addClass(cScoreDiv, 0)
+        addClass(pScoreDiv, 1)
     }
     else {
         ties += 1;
-        document.getElementById("pWin").classList.remove("lose");
-        document.getElementById("pWin").classList.remove("win");
-        document.getElementById("pWin").classList.add("tie");
-        document.getElementById("cWin").classList.remove("win");
-        document.getElementById("cWin").classList.remove("lose");
-        document.getElementById("cWin").classList.add("tie");
+        addClass(cCard, 2)
+        addClass(pCard, 2)
+        addClass(cScoreDiv, 2)
+        addClass(pScoreDiv, 2)
     }
     updateScoreDisplay(pScore, cScore, ties);
 }

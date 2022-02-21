@@ -35,7 +35,7 @@
                     <div class="card">
                         <ul class="list-group list-group-flush text-center">
                             <li class="list-group-item"><span>Player Score:</span></li>
-                            <li class="list-group-item" style="background-color: rgb(162, 255, 162);"><span class="score player">0</span></li>
+                            <li id="pScore" class="list-group-item player tie"><span class="score player">0</span></li>
                         </ul>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                     <div class="card">
                         <ul class="list-group list-group-flush text-center">
                             <li class="list-group-item" ><span>Ties:</span></li>
-                            <li class="list-group-item" style="background-color: rgb(253, 255, 123);"><span class="score ties">0</span></li>
+                            <li class="list-group-item tie"><span class="score ties">0</span></li>
                         </ul>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <div class="card">
                         <ul class="list-group list-group-flush text-center">
                             <li class="list-group-item"><span>CPU Score:</span></li>
-                            <li class="list-group-item" style="background-color: rgb(253, 146, 131);"><span class="score cpu">0</span></li>
+                            <li id="cScore" class="list-group-item cpu tie"><span class="score cpu">0</span></li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
             <div class="row m-4">
                 <!-- Player Hand -->
                 <div class="col text-center">
-                    <div id="pWin" class="card tie">
+                    <div id="pWin" class="card player tie">
                         <div class="card-body text-center">
                             <h5 class="card-title">Player</h5>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rock-paper-scissors_%28rock%29.png/240px-Rock-paper-scissors_%28rock%29.png" id="pHand" class="img-fluid">
@@ -79,7 +79,7 @@
                 </div>
                 <!-- CPU Hand -->
                 <div class="col">
-                    <div id="cWin" class="card tie">
+                    <div id="cWin" class="card cpu tie">
                         <div class="card-body text-center">
                             <h5 class="card-title">Computer</h5>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rock-paper-scissors_%28rock%29.png/240px-Rock-paper-scissors_%28rock%29.png" id="cHand" class="img-fluid x-flip">
@@ -117,7 +117,7 @@
     
     
 
-    
+    <script src="popper.min.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

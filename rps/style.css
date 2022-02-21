@@ -1,17 +1,21 @@
 .win {
     transform: scale(1.1);
-    background-color: rgb(109, 255, 109);
+    /* background-color: rgb(109, 255, 109); */
+    background-color: rgb(162, 255, 162);
     transition-duration: 0.5s;
 }
+
 .lose {
-    background-color: rgb(255, 131, 131);
+    /* background-color: rgb(255, 131, 131); */
     transform: scale(0.9);
     transition-duration: 0.5s;
     width: 100%;
-    
+    background-color: rgb(253, 146, 131);
 }
+
 .tie {
-    background-color: rgb(245, 255, 152);
+    background-color: rgb(245, 255, 159);
+    /* background-color: rgb(253, 255, 123); */
     transition-duration: 0.5s;
     width: 100%;
 }
