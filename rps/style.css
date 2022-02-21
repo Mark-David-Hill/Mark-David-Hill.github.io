@@ -1,15 +1,24 @@
 .win {
+    transform: scale(1.1);
     background-color: rgb(109, 255, 109);
+    transition-duration: 0.5s;
 }
 .lose {
     background-color: rgb(255, 131, 131);
+    transform: scale(0.9);
+    transition-duration: 0.5s;
+    width: 100%;
+    
 }
 .tie {
     background-color: rgb(245, 255, 152);
+    transition-duration: 0.5s;
+    width: 100%;
 }
 
 #pWin, #cWin {
     max-width: 150px;
+    transition-duration: 1s;
 }
 
 .x-flip {
