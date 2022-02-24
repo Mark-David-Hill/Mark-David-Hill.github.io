@@ -1,5 +1,6 @@
 // To Do
 // -Have tooltip for win percentages? 
+// -Change background color of results text based on result?
 
 // 
 // Initialize
