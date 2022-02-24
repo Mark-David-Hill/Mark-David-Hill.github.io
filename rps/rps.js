@@ -46,7 +46,7 @@ let start = function() {
     results.classList.add('results')
 
     stop(pCard, 'pStart', 300);
-    stop(cCard, 'pStart', 300);
+    stop(cCard, 'cStart', 300);
     stop(results, 'results', 3000);
 }
 
