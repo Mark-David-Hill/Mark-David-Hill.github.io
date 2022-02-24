@@ -1,11 +1,5 @@
 // To Do
-// -Add animations?
-//  -Have hand cards be flipped over at first, show faint preview of your throw on hover, then flip them when you actually click.
-// 
-// Note- it's not very visually interesting if the same result happens again. Need to reset cards before starting again. Have New Game button.
-// 
-// -Improve style
-// Refactor some code
+// -Have tooltip for win percentages? 
 
 // 
 // Initialize
@@ -17,6 +11,7 @@ let initialize = function(...options) {
     console.log('rps.js start');
     options.forEach(id => {
         document.getElementById(id).addEventListener('click', function() {
+            start();
             console.log(evaluate(id, cpuThrow()));
         })
     });
@@ -38,6 +33,28 @@ let cpuThrow = function() {
             console.log('invalid number generated')
             break;
     }
+}
+
+// Animation
+let start = function() {
+    let pCard = document.getElementById('pWin');
+    let cCard = document.getElementById('cWin');
+    let results = document.getElementById('winMessage');
+
+    pCard.classList.add('pStart');
+    cCard.classList.add('cStart');
+    results.classList.add('results')
+
+    stop(pCard, 'pStart', 300);
+    stop(cCard, 'pStart', 300);
+    stop(results, 'results', 3000);
+}
+
+// Stop animation
+let stop = function(element, className, time) {
+    setTimeout(function(){ 
+        element.classList.remove(className);
+    }, 300);
 }
 
 // 

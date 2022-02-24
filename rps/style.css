@@ -38,3 +38,46 @@
 body {
     background-color: rgb(189, 189, 189);
 }
+
+
+
+/* Throw Animations */
+@keyframes pThrow {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(12px, 0);
+    }
+}
+
+@keyframes cThrow {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-12px, 0);
+    }
+}
+  
+  /* The element to apply the animation to */
+.pStart {
+    /* animation: infinite; */
+    animation-name: pThrow;
+    animation-duration: 0.3s;
+}
+
+.cStart {
+    animation-name: cThrow;
+    animation-duration: 0.3s;
+}
+
+.results {
+    animation: fade 3s linear forwards;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+
+    100% { opacity: 1; }
+}
