@@ -12,8 +12,11 @@ let initialize = function(...options) {
     console.log('rps.js start');
     options.forEach(id => {
         document.getElementById(id).addEventListener('click', function() {
-            start(id, cpuThrow);
-            // console.log(evaluate(id, cpuThrow()));
+            // start(id, cpuThrow);
+            console.log(evaluate(id, cpuThrow()));
+            let results = document.getElementById('winMessage');
+            results.classList.add('results')
+            stop(results, 'results', 3000);
         })
     });
 }

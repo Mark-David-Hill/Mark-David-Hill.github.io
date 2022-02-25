@@ -69,20 +69,15 @@ body {
     /* animation: infinite; */
     animation-name: pThrow;
     animation-duration: 0.3s;
-    -webkit-animation-name: pThrow;
-    -webkit-animation-duration: 0.3s;
 }
 
 .cStart {
     animation-name: cThrow;
     animation-duration: 0.3s;
-    -webkit-animation-name: cThrow;
-    -webkit-animation-duration: 0.3s;
 }
 
 .results {
     animation: fade 3s linear forwards;
-    -webkit-animation: fade 3s linear forwards;
 }
 
 @keyframes fade {
