@@ -12,8 +12,8 @@ let initialize = function(...options) {
     console.log('rps.js start');
     options.forEach(id => {
         document.getElementById(id).addEventListener('click', function() {
-            start();
-            console.log(evaluate(id, cpuThrow()));
+            start(id, cpuThrow);
+            // console.log(evaluate(id, cpuThrow()));
         })
     });
 }
@@ -37,7 +37,7 @@ let cpuThrow = function() {
 }
 
 // Animation
-let start = function() {
+let start = function(id, cpuThrow) {
     let pCard = document.getElementById('pWin');
     let cCard = document.getElementById('cWin');
     let results = document.getElementById('winMessage');
@@ -49,6 +49,8 @@ let start = function() {
     stop(pCard, 'pStart', 300);
     stop(cCard, 'cStart', 300);
     stop(results, 'results', 3000);
+    startEval(id, cpuThrow)
+    
 }
 
 // Stop animation
@@ -56,6 +58,12 @@ let stop = function(element, className, time) {
     setTimeout(function(){ 
         element.classList.remove(className);
     }, 300);
+}
+
+let startEval = function(id, cpuThrow) {
+    setTimeout(function() {
+        console.log(evaluate(id, cpuThrow()));
+    }, 300)
 }
 
 // 

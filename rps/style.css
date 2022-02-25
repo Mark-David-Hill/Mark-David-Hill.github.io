@@ -40,8 +40,11 @@ body {
 }
 
 
-
+/*  */
 /* Throw Animations */
+/*  */
+
+/* Player Throw Animation */
 @keyframes pThrow {
     from {
         transform: translate(0, 0);
@@ -51,25 +54,8 @@ body {
     }
 }
 
-@-webkit-keyframes pThrow {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(12px, 0);
-    }
-}
-
+/* CPU Throw Animation */
 @keyframes cThrow {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(-12px, 0);
-    }
-}
-
-@-webkit-keyframes cThrow {
     from {
         transform: translate(0, 0);
     }
@@ -97,12 +83,6 @@ body {
 .results {
     animation: fade 3s linear forwards;
     -webkit-animation: fade 3s linear forwards;
-}
-
-@-webkit-keyframes fade {
-    0% { opacity: 0; }
-
-    100% { opacity: 1; }
 }
 
 @keyframes fade {
