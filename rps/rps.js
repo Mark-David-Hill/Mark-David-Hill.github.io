@@ -1,24 +1,31 @@
-// To Do
-// -Have tooltip for win percentages? 
-// -Change background color of results text based on result?
-
 // 
 // Initialize
 // 
 
-
-
-let initialize = function(...options) {
-    console.log('rps.js start');
-    options.forEach(id => {
+// Sets up click events for the rock, paper, and scissors buttons
+let initialize = function(...possibleThrows) {
+    possibleThrows.forEach(id => {
         document.getElementById(id).addEventListener('click', function() {
-            // start(id, cpuThrow);
-            console.log(evaluate(id, cpuThrow()));
-            let results = document.getElementById('winMessage');
-            results.classList.add('results')
-            stop(results, 'results', 3000);
+            displayThrows(id, cpuThrow());
+            ResultsAnim();
         })
     });
+}
+
+initialize('rock', 'paper', 'scissors');
+
+// Basic flow of functions:
+// ResultsAnim/displayThrows, evaluate, updateScore, updateScoreDisplay
+
+// Play Results fade-in animation
+let ResultsAnim = function() {
+    let results = document.getElementById('winMessage');
+    let className = 'results'
+    results.classList.add(className) 
+    // Set timer for removing animation class
+    setTimeout(function(){ 
+        results.classList.remove(className);
+    }, 300);
 }
 
 // 
@@ -39,48 +46,15 @@ let cpuThrow = function() {
     }
 }
 
-// Animation
-let start = function(id, cpuThrow) {
-    let pCard = document.getElementById('pWin');
-    let cCard = document.getElementById('cWin');
-    let results = document.getElementById('winMessage');
-
-    pCard.classList.add('pStart');
-    cCard.classList.add('cStart');
-    results.classList.add('results')
-
-    stop(pCard, 'pStart', 300);
-    stop(cCard, 'cStart', 300);
-    stop(results, 'results', 3000);
-    startEval(id, cpuThrow)
-    
-}
-
-// Stop animation
-let stop = function(element, className, time) {
-    setTimeout(function(){ 
-        element.classList.remove(className);
-    }, 300);
-}
-
-let startEval = function(id, cpuThrow) {
-    setTimeout(function() {
-        console.log(evaluate(id, cpuThrow()));
-    }, 300)
-}
-
 // 
 // Evaluation and Scores
 // 
 
-// Evaluation
+// Evaluate outcome based on player choice and randomized cpu throw
 let evaluate = function(player, cpu) {
     let winner = '';
     let winMessage = document.getElementById('winMessage');
-    console.log('Player threw ' + player);
     let messages = ['You Win!', 'You Lose', 'Tie']
-    console.log('cpu threw ' + cpu)
-    displayThrows(player, cpu);
     // Tie
     if(player === cpu) {
         winner = 'tie';
@@ -216,6 +190,8 @@ function displayThrows(player, cpu) {
 
     setImg(player, playerHand);
     setImg(cpu, cpuHand);
+
+    evaluate(player, cpu);
 }
 
 // Display Scores
@@ -236,11 +212,6 @@ function updateScoreDisplay(pScore, cScore, ties) {
     }
 }
 
-// 
-// Initialize Game
-// 
-
-initialize('rock', 'paper', 'scissors');
 
 
 // for testing

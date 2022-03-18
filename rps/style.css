@@ -1,21 +1,19 @@
 .win {
-    /* transform: scale(1.1); */
-    /* background-color: rgb(109, 255, 109); */
+    transform: scale(1.1);
     background-color: rgb(162, 255, 162);
     transition-duration: 0.5s;
 }
 
 .lose {
-    /* background-color: rgb(255, 131, 131); */
-    /* transform: scale(0.9); */
+    transform: scale(0.9);
     transition-duration: 0.5s;
     width: 100%;
     background-color: rgb(253, 146, 131);
 }
 
 .tie {
+    transform: scale(1);
     background-color: rgb(245, 255, 159);
-    /* background-color: rgb(253, 255, 123); */
     transition-duration: 0.5s;
     width: 100%;
 }
@@ -41,78 +39,8 @@ body {
 
 
 /*  */
-/* Throw Animations */
+/* Results Fade Animation */
 /*  */
-
-/* Player Throw Animation */
-@keyframes pThrowWin {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-    50% {
-        transform: translate(12px, 0) scale(1);
-    }
-    100% {
-        transform: translate(0, 0) scale(1.1);
-    }
-}
-@keyframes pThrowLose {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-    50% {
-        transform: translate(12px, 0) scale(1);
-    }
-    100% {
-        transform: translate(0, 0) scale(0.9);
-    }
-}
-@keyframes pThrowTie {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-    50% {
-        transform: translate(12px, 0) scale(1);
-    }
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
-}
-
-/* CPU Throw Animation */
-@keyframes cThrow {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(-12px, 0);
-    }
-}
-  
-  /* The element to apply the animation to */
-.pStart.win {
-    /* animation: infinite; */
-    animation-name: pThrowWin;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-}
-.pStart.lose {
-    /* animation: infinite; */
-    animation-name: pThrowLose;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-}
-.pStart.tie {
-    /* animation: infinite; */
-    animation-name: pThrowTie;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-}
-
-.cStart {
-    animation-name: cThrow;
-    animation-duration: 0.3s;
-}
 
 .results {
     animation: fade 3s linear forwards;
