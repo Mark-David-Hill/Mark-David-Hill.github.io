@@ -1,6 +1,6 @@
 // initialize
 (function () {
-    setClickEvents()
+    setupClickEvents()
   })();
 
 
@@ -13,8 +13,8 @@
 
 // Setup click events
 
-function setClickEvents() {
-
+function setupClickEvents() {
+    
 }
 
 
