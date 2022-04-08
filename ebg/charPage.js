@@ -228,12 +228,6 @@ function displayWeapons(gameData, classIndex) {
     const mWeaponEl = document.getElementById('meleeWeapon');
     // Only display ranged weapon if Archer was chosen
     if (classIndex === 0) {
-        // const rwName;
-        // const rwDmg;
-        // const rwRange
-        // const rwSpB;
-        // const rwDesc;
-        // const rw
         rWeaponEl.classList.remove('hidden');
         mWeaponEl.classList.add('hidden');
     }
@@ -244,6 +238,11 @@ function displayWeapons(gameData, classIndex) {
         mNameEl.innerText = mWeaponName;
     }
     
+}
+
+// Capitalize String Function
+function capitalizeString(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 // 
@@ -263,9 +262,13 @@ function displayTechniques(gameData, classIndex, elementIndex) {
     console.log('class tech: ');
     console.log(classTech);
 
-    // const charClass = gameData.charClasses[classIndex];
+    const charClass = capitalize(gameData.charClasses[classIndex]);
     const techModal = document.getElementById('techModal');
     content = "";
+
+    const techTitle = document.getElementById('techTitle')
+
+    techTitle.innerHTML = `${charClass} Techniques`
 
     for (i = 0; i < classTech.length; i++) {
         let tech = classTech[i]
