@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Character Creation</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+
+          <!-- H1 Row -->
+          <div class="row">
+            <div class="px-4 py-5 my-5 text-center">
+                <h1 class="display-5 fw-bold">Character Creation</h1>
+                <div class="col-lg-6 mx-auto">
+                  <!-- <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p> -->
+                  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                  </div>
+                </div>
+              </div>
+          </div> <!-- End Row -->
+          
+          <!-- Row -->
+          <div class="row">
+            <div class="col">
+              <!--  -->
+              <!-- Character Creation Form -->
+              <!--  -->
+
+              <form class="needs-validation">
+                <legend>Starting Info</legend>
+                <!-- Name -->
+                <div class="form-row my-2">
+                    <div class="form-group">
+                        <label for="nameField">Name</label>
+                        <input type="text" class="form-control" name="heroName" id="nameField" placeholder="Name" required>
+                        <div class="valid-tooltip">
+                        Looks good!
+                        </div>
+                    </div>
+                </div> <!-- End form row -->
+
+                <!--  -->
+                <!-- Class -->
+                <!--  -->
+
+                <div class="form-row">
+                    <label class="inputLabel">Class</label>
+                </div>
+                <div class="form-row my-2">
+                    <div class="form-group">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                              <input required type="radio" name="classGroup" id="archer" value="archer" onclick="onRadioChoice()"> Archer
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="classGroup" id="cleric" value="cleric" onclick="onRadioChoice()"> Cleric
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="classGroup" id="magician" value="magician" onclick="onRadioChoice()"> Magician
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="classGroup" id="warrior" value="warrior" onclick="onRadioChoice()"> Warrior
+                            </label>
+                          </div>
+                    </div>
+                </div> <!-- End form row -->
+
+                <!--  -->
+                <!-- Race -->
+                <!--  -->
+
+                <div class="form-row">
+                    <label class="inputLabel">Race</label>
+                </div>
+                <div class="form-row my-2">
+                    <div class="form-group">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                              <input required class="raceRadio" type="radio" name="raceGroup" value="aven" id="aven" onclick="onRadioChoice()"> Aven
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input class="raceRadio" type="radio" name="raceGroup" value="breken" id="breken" onclick="onRadioChoice()"> Breken
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input class="raceRadio" type="radio" name="raceGroup" value="kyrek" id="kyrek" onclick="onRadioChoice()"> Kyrek
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input class="raceRadio" type="radio" name="raceGroup" value="rokoll" id="rokoll" onclick="onRadioChoice()"> Rokoll
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input class="raceRadio" type="radio" value="silmaeri" name="raceGroup" id="silmaeri" onclick="onRadioChoice()"> Silmaeri
+                            </label>
+                          </div>
+                    </div>
+                </div> <!-- End form row -->
+
+                <!--  -->
+                <!-- Element -->
+                <!--  -->
+
+                <div class="form-row">
+                    <label class="inputLabel">Element</label>
+                </div>
+                <div class="form-row my-2">
+                    <div class="form-group">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                              <input required type="radio" name="elementGroup" value="air" id="air" onclick="onRadioChoice()"> Air
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="elementGroup" value="earth" id="earth" onclick="onRadioChoice()"> 
+                              Earth
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="elementGroup" value="fire" id="fire" onclick="onRadioChoice()"> Fire
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="elementGroup" value="water" id="water" onclick="onRadioChoice()"> Water
+                            </label>
+                          </div>
+                    </div>
+                </div> <!-- End form row -->
+
+                <!-- Submit Button -->
+
+                <div class="form-row mt-4">
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Create Character</button>
+                    </div>
+                </div> <!-- End form row -->
+
+              </form>
+            </div>
+
+            <!-- Preview Info -->
+
+            <div class="col">
+              <h2 class="text-center">Stats Preview</h2>
+              <p id="statsDisplay" class="text-center"><strong>Max HP</strong>: &nbsp;&nbsp; <strong>maxTP</strong>: &nbsp;&nbsp; <strong>STR</strong>: &nbsp;&nbsp; <strong>INT</strong>: &nbsp;&nbsp; <strong>AGI</strong>: </p>
+              <div>
+                <canvas id="statsChart"></canvas>
+              </div>
+            </div>
+
+
+            
+          </div> <!-- End Row -->
+          <div class="row">
+          </div>
+      </div>
+    </main>
+
+
+      
+      
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="character.js"></script>
+  </body>
+</html>

@@ -1,0 +1,625 @@
+{   
+    "stats": ["maxHp", "maxTp", "str", "int", "agi"],
+    "elements": ["air", "earth", "fire", "water"],
+    "races":["aven", "breken", "kyrek", "rokoll", "silmaeri"],
+    "statMods":[
+        [3, 0, 3, 5, 4],[5, 0, 5, 0, 5],[8, 2, 3, 2, 0],[5, 0, 8, 0, 2],[9, 0, 4, 2, 0]
+    ],
+    "charClasses":["archer", "cleric", "magician", "warrior"],
+    "baseStats":[
+        [65, 8, 10, 5, 10],[55, 20, 7, 20, 8],[55, 20, 8, 22, 7],[70, 6, 15, 7, 6]
+    ],
+    "startWeapons":[
+        "Short Bow, Knives",
+        "Short Rod",
+        "Short Staff",
+        "Short Sword"
+    ],
+    "techniques":[
+        [
+            {
+                "name":"Elemental Arrow",
+                "wisdom":2,
+                "tp":5,
+                "range":"same as weapon",
+                "cooldown":1,
+                "description":"A ranged attack that deals STR+INT dmg, as well as a varying effect based on your element.",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Twin Daggers",
+                "wisdom":2,
+                "tp":4,
+                "range":"melee",
+                "cooldown":1,
+                "description":"Melee Attack that inflicts STR+(INTx1.5) dmg (must have a melee weapon equipped).",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Arrow Regen",
+                "wisdom":3,
+                "tp":10,
+                "range":"NA",
+                "cooldown":1,
+                "description":"Restores your SPB to full capacity.",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Quick Draw",
+                "wisdom":2,
+                "tp":3,
+                "range":"NA",
+                "cooldown":1,
+                "description":"This technique allows you to change your weapon without using up an action (this technique doesn’t count as an action either).",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Double Attack",
+                "wisdom":2,
+                "tp":3,
+                "range":"NA",
+                "cooldown":1,
+                "description":"Can use 2 more techniques (not including this one) as part of a single action (could use up to 4 additional techniques in one turn if Double Attack is used twice and you don’t move).",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Triple Attack",
+                "wisdom":3,
+                "tp":7,
+                "range":"NA",
+                "cooldown":1,
+                "description":"Can use 3 more techniques (not including this one) as part of a single action.",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Area Effect Shot",
+                "wisdom":3,
+                "tp":8,
+                "range":"same as weapon",
+                "cooldown":1,
+                "description":"A ranged attack that inflicts dmg equal to your STR in a 2x2 space square.",
+                "damageStat":"STR",
+                "damageMultiplier":1,
+                "image":""
+            },
+            {
+                "name":"Advanced Area Effect Shot",
+                "wisdom":4,
+                "tp":15,
+                "range":"same as weapon",
+                "cooldown":1,
+                "description":"A ranged attack that inflicts dmg equal to your STR+INT in a 2x2 space square.",
+                "damageStat":"STR+INT",
+                "damageMultiplier":1,
+                "image":""
+            },
+            {
+                "name":"Life Drain",
+                "wisdom":3,
+                "tp":8,
+                "range":"same as weapon",
+                "cooldown":1,
+                "description":"A ranged attack that inflicts INTx1 dmg to the enemy and converts an amount equal to the dmg inflicted into HP for the Archer.",
+                "damageStat":"INT",
+                "damageMultiplier":1,
+                "image":""
+            },
+            {
+                "name":"Advanced Life Drain",
+                "wisdom":4,
+                "tp":15,
+                "range":"same as weapon",
+                "cooldown":1,
+                "description":"A ranged attack that inflicts INTx2 dmg to the enemy and converts an amount equal to the dmg inflicted into HP for the Archer (requires Life Drain).",
+                "damageStat":"INTx2",
+                "damageMultiplier":1,
+                "image":""
+            }
+
+        ],
+        [
+            {
+                "name":"Relane 1",
+                "wisdom":1,
+                "tp":4,
+                "range":5,
+                "cooldown":1,
+                "description":"Restores your own HP or the HP of an ally by INTx1.",
+                "damageStat":"INT",
+                "damageMultiplier":1,
+                "image":""
+            },
+            {
+                "name":"Relane 2",
+                "wisdom":2,
+                "tp":10,
+                "range":5,
+                "cooldown":1,
+                "description":"Restores your own HP or the HP of an ally by INTx2, or can heal all friendly heroes in range by INTx1.",
+                "damageStat":"INT",
+                "damageMultiplier":"1/2",
+                "image":""
+            },
+            {
+                "name":"Relane 3",
+                "wisdom":3,
+                "tp":20,
+                "range":5,
+                "cooldown":1,
+                "description":"Restores your own HP or the HP of an ally by INTx3, or can heal all friendly heroes within a range of 5 by INTx1.",
+                "damageStat":"INT",
+                "damageMultiplier":"1/3",
+                "image":""
+            },
+            {
+                "name":"Call Leokiri",
+                "wisdom":2,
+                "tp":5,
+                "range":2,
+                "cooldown":1,
+                "description":"Summons 1 Leokiri to fight for the Cleric for the rest of the battle or until it is defeated.",
+                "damageStat":"",
+                "damageMultiplier":"",
+                "image":""
+            },
+            {
+                "name":"Call Leokara",
+                "wisdom":3,
+                "tp":10,
+                "range":2,
+                "cooldown":1,
+                "description":"Summons 1 Leokara to fight for the Cleric for the rest of the battle or until it is defeated.",
+                "damageStat":"",
+                "damageMultiplier":"",
+                "image":""
+            },
+            {
+                "name":"Call Leokoro",
+                "wisdom":4,
+                "tp":15,
+                "range":2,
+                "cooldown":1,
+                "description":"Summons 1 Leokoro to fight for the Cleric for the rest of the battle or until it is defeated.",
+                "damageStat":"",
+                "damageMultiplier":"",
+                "image":""
+            },
+            {
+                "name":"Revive",
+                "wisdom":4,
+                "tp":20,
+                "range":5,
+                "cooldown":1,
+                "description":"Revives an unconscious ally and restores 1/2 maxHP, or the Cleric may use on itself once per battle at the moment their HP is reduced to 0.",
+                "damageStat":"",
+                "damageMultiplier":"",
+                "image":""
+            },
+            {
+                "name":"Carax",
+                "wisdom":3,
+                "tp":10,
+                "range":5,
+                "cooldown":1,
+                "description":"Out of battle (on the Overworld) you can teleport to the location of an ally or teleport an ally to you. In battle you can teleport yourself, an ally, or an enemy up to 5 spaces in any direction. If an enemy is teleported outside the area of the battle board, this results in the enemy disappearing from the battle (This doesn’t work on bosses and you don’t gain EXP from enemies who are teleported out of the battle).",
+                "damageStat":"",
+                "damageMultiplier":"",
+                "image":""
+            },
+            {
+                "name":"Frekor",
+                "wisdom":3,
+                "tp":18,
+                "range":5,
+                "cooldown":1,
+                "description":"Element-dependent attribute bonus for 5 turns. Each hero may only have one of these bonuses at a time. Fire-STR increased by ½ INT, Water-INT increased by ½ INT, Air- +2 movement spaces, Earth-doubles the dmg reduction of a hero‘s armor (if no armor is equipped, gives the hero an armor value of 3).",
+                "damageStat":"",
+                "damageMultiplier":"",
+                "image":""
+            },
+            {
+                "name":"Grahkil",
+                "wisdom":3,
+                "tp":5,
+                "range":5,
+                "cooldown":1,
+                "description":"Does dmg equal to the Cleric’s INTx1. ",
+                "damageStat":"INT",
+                "damageMultiplier":"1",
+                "image":""
+            }
+        ],
+        [
+            [
+                {
+                    "name":"First Air Magician Technique",
+                    "wisdom":0,
+                    "tp":0,
+                    "range":"weapon?",
+                    "cooldown":0,
+                    "description":"What a great technique!",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                }
+            ],
+            [
+                {
+                    "name":"First Earth Magician Technique",
+                    "wisdom":0,
+                    "tp":0,
+                    "range":"weapon?",
+                    "cooldown":0,
+                    "description":"What a great technique!",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                }
+            ],
+            [
+                {
+                    "name":"First Fire Magician Technique",
+                    "wisdom":0,
+                    "tp":0,
+                    "range":"weapon?",
+                    "cooldown":0,
+                    "description":"What a great technique!",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                }
+            ],
+            [
+                {
+                    "name":"First Water Magician Technique",
+                    "wisdom":0,
+                    "tp":0,
+                    "range":"weapon?",
+                    "cooldown":0,
+                    "description":"What a great technique!",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                }
+            ]
+        ],
+        [
+            {
+                "name":"Strike 1",
+                "wisdom":2,
+                "tp":3,
+                "range":"weapon",
+                "cooldown":1,
+                "description":"inflicts INTx½ dmg to 1 enemy. This technique may be used in addition to a regular attack without taking up an extra turn.  Thus the warrior could attack and use Strike Lvl 1, then attack again and use Strike Lvl 2 all in one turn.",
+                "damageStat":"int",
+                "damageMultiplier":0.5,
+                "image":"./images/quick-slash.png"
+            },
+            {
+                "name":"Strike 2",
+                "wisdom":3,
+                "tp":6,
+                "range":"weapon",
+                "cooldown":1,
+                "description":"Inflicts INTx1 dmg to 1 enemy. This technique may be used in addition to a regular attack without taking up an extra turn.  Thus the warrior could attack and use Strike Lvl 1, then attack again and use Strike Lvl 2 all in one turn.",
+                "damageBaseStat":"int",
+                "damageMultiplier":1,
+                "image":""
+            },
+            {
+                "name":"Strike 3",
+                "wisdom":4,
+                "tp":10,
+                "range":"weapon",
+                "cooldown":1,
+                "description":"Inflicts INTx1½ dmg to 1 enemy. This technique may be used in addition to a regular attack without taking up an extra turn.  Thus the warrior could attack and use Strike Lvl 1, then attack again and use Strike Lvl 2 all in one turn.",
+                "damageBaseStat":"int",
+                "damageMultiplier":1.5,
+                "image":""
+            },
+            {
+                "name":"Cyclone",
+                "wisdom":3,
+                "tp":8,
+                "range":"adjacent enemies",
+                "cooldown":1,
+                "description":"Attacks all adjacent enemies (including those in diagonally adjacent spaces) for STRx1",
+                "damageBaseStat":"str",
+                "damageMultiplier":1,
+                "image":""
+            },
+            {
+                "name":"Counter",
+                "wisdom":3,
+                "tp":6,
+                "range":"weapon",
+                "cooldown":1,
+                "description":"For the next 3 times the warrior is attacked, he or she is able to attack back (if the enemy is within the warrior's range),",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Lunge",
+                "wisdom":3,
+                "tp":5,
+                "range":"2",
+                "cooldown":1,
+                "description":"For the next 3 times the ]warrior is attacked, he or she is able to attack back (if the enemy is within the warrior's range),",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Defensive stance",
+                "wisdom":3,
+                "tp":5,
+                "range":"weapon",
+                "cooldown":1,
+                "description":"Increases the warrior's armor by INTx½ for 3 turns",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Offensive Stance",
+                "wisdom":3,
+                "tp":5,
+                "range":"weapon",
+                "cooldown":1,
+                "description":"Increases the warrior's STR by INTx1 for 3 turns",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Aura",
+                "wisdom":3,
+                "tp":5,
+                "range":"self",
+                "cooldown":1,
+                "description":"The effect of this technique is determined by the warrior's element.",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Air Aura",
+                "wisdom":3,
+                "tp":5,
+                "range":"self",
+                "cooldown":1,
+                "description":"For the next 3 turns, enemies attacking the warrior will miss with any attack roll combination of 1, 2, or 3.",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Earth Aura",
+                "wisdom":3,
+                "tp":5,
+                "range":"self",
+                "cooldown":1,
+                "description":"The next two enemies who attack the warrior become more susceptible to attacks for 2 turns.  During this time, they receive additional dmg equal to the warrior's INTx1 each time they are attacked.",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Fire Aura",
+                "wisdom":3,
+                "tp":5,
+                "range":"self",
+                "cooldown":1,
+                "description":"Decreases the strength of the next two enemies who attack by INTx1 for 2 turns.",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            },
+            {
+                "name":"Water Aura",
+                "wisdom":3,
+                "tp":5,
+                "range":"self",
+                "cooldown":1,
+                "description":"Freezes the next two enemies who attack the warrior for 2 turns.  A frozen enemy may not move or take any action.  If a frozen enemy is attacked before the two turns are up, it is no longer frozen.",
+                "damageStat":"",
+                "damageMultiplier":0,
+                "image":""
+            }
+        ]
+    ],
+    "raceSoulForces":[
+        {
+            "name":"Over Limit",
+            "chargeCost":5,
+            "range":"self",
+            "damageStat":"NA",
+            "damageMultiplier":0,
+            "description":"When you defeat an enemy, any excess dmg that would’ve been dealt (past 0 HP) to the enemy is converted into HP for the Aven. Over Limit’s effect lasts for the rest of the battle it is used in."
+        },
+        {
+            "name":"Precision Aiming",
+            "chargeCost":5,
+            "range":"self",
+            "damageStat":"NA",
+            "damageMultiplier":0,
+            "description":"You will deal out a critical hit with any attack roll combination of 4, 5, or 6 (4-4, 4-5, 4-6, 5-5, 5-6, 6-6). Precision Aiming’s effect lasts for the rest of the battle it is used in."
+        },
+        {
+            "name":"Burrow",
+            "chargeCost":5,
+            "range":"self",
+            "damageStat":"NA",
+            "damageMultiplier":0,
+            "description":"The Kyrek tunnels underground for two turns. While underground the Hero cannot take any actions and cannot be acted upon. The Kyrek regains 30 HP before resurfacing. You may choose to resurface in  any square within one space of where you burrowed."
+        },
+        {
+            "name":"Dual Strike",
+            "chargeCost":5,
+            "range":"same as weapon",
+            "damageStat":"NA",
+            "damageMultiplier":0,
+            "description":"Attack twice with your weapon (uses up shots per battle if a ranged weapon is used)."
+        },
+        {
+            "name":"Defensive Skin",
+            "chargeCost":5,
+            "range":"self",
+            "damageStat":"NA",
+            "damageMultiplier":0,
+            "description":"This Soul Force blocks all dmg to your character for the next 3 turns. Once these turns are up, you will receive any dmg that would’ve been dealt by surviving enemies (dmg from enemies defeated up to this point is negated). "
+        }
+    ],
+    "classSoulForces":[
+        {
+            "name":"Arrow Rain",
+            "chargeCost":10,
+            "range":"same as weapon",
+            "damageStat":"",
+            "damageMultiplier":0,
+            "description":"Attack 3 times with your ranged weapon (doesn’t use up your shots per battle)."
+        },
+        {
+            "name":"Reflection",
+            "chargeCost":10,
+            "range":"any",
+            "damageStat":"",
+            "damageMultiplier":0,
+            "description":"Places a shield on the Cleric for 4 turns or on all allies for 3 turns. When attacked while possessing the shield, the Cleric receives half dmg and half the dmg is reflected back dealing dmg to the enemy. "
+        },
+        {
+            "name":"Outbreak",
+            "chargeCost":10,
+            "range":5,
+            "damageStat":"INT+5",
+            "damageMultiplier":0,
+            "description":"Inflicts INT+5 dmg on all enemies within a range of 5 "
+        },
+        {
+            "name":"Crippling Blow",
+            "chargeCost":10,
+            "range":3,
+            "damageStat":"STR",
+            "damageMultiplier":1,
+            "description":"Attack twice within a range of 3 and stun one enemy for 2 turns. The stunned enemy cannot move or attack. Crippling Blow does not stun bosses. Must defeat 10 enemies to charge Crippling Blow before each use."
+        }
+    ],
+    "weapons": [
+        [],
+        [],
+        [],
+        []
+    ],
+    "armorTypes":["light","medium","heavy"],
+    "armor": [
+        [],
+        [],
+        []
+    ],
+    "startChargeCount":3,
+    "levelCap":10,
+    "levels":[
+        {
+            "level":1,
+            "exp":0,
+            "statsUp":0,
+            "wisdom":2
+        },
+        {
+            "level":2,
+            "exp":50,
+            "statsUp":8,
+            "wisdom":2
+        },
+        {
+            "level":3,
+            "exp":100,
+            "statsUp":8,
+            "wisdom":2
+        },
+        {
+            "level":4,
+            "exp":150,
+            "statsUp":8,
+            "wisdom":2
+        },
+        {
+            "level":5,
+            "exp":200,
+            "statsUp":15,
+            "wisdom":2
+        },
+        {
+            "level":6,
+            "exp":300,
+            "statsUp":15,
+            "wisdom":2
+        },
+        {
+            "level":7,
+            "exp":400,
+            "statsUp":15,
+            "wisdom":2
+        },
+        {
+            "level":8,
+            "exp":500,
+            "statsUp":15,
+            "wisdom":2
+        },
+        {
+            "level":9,
+            "exp":600,
+            "statsUp":15,
+            "wisdom":2
+        },
+        {
+            "level":10,
+            "exp":750,
+            "statsUp":25,
+            "wisdom":2
+        }
+    ],
+    "playerChar":{
+        "name":"",
+        "race":"",
+        "class":"",
+        "element":"",
+        "level":"",
+        "wisdom":"",
+        "charges":"",
+        "money":"",
+        "weapon":"",
+        "armor":"",
+        "stats":{
+            "maxHp":"",
+            "currentHp":"",
+            "maxTp":"",
+            "currentTp":"",
+            "str":"",
+            "int":"",
+            "agi":""
+        }
+    },
+    "chapter1":{
+        "enemies":[],
+        "missions":[]
+    },
+    "chapter2":{
+        "enemies":[],
+        "missions":[]
+    }
+}
