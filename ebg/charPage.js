@@ -240,11 +240,6 @@ function displayWeapons(gameData, classIndex) {
     
 }
 
-// Capitalize String Function
-function capitalizeString(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
 // 
 // Display Techniques
 // 
