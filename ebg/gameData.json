@@ -309,6 +309,73 @@
                     "damageStat":"",
                     "damageMultiplier":3,
                     "image":""
+                },
+                {
+                    "name":"Lightning Lvl 1",
+                    "wisdom":1,
+                    "tp":3,
+                    "range":3,
+                    "cooldown":1,
+                    "description":"Inflicts INTx1 minus 5 dmg to 1 enemy which is then paralyzed (must roll two dice when attempting to move. Combinations of 4, 5, and 6 allow it to move). Lasts for 4 turns. ",
+                    "damageStat":"",
+                    "damageMultiplier":1,
+                    "image":""
+                },
+                {
+                    "name":"Lightning Lvl 2",
+                    "wisdom":2,
+                    "tp":7,
+                    "range":4,
+                    "cooldown":3,
+                    "description":"Inlficts INTx2 minus 10 dmg to 1 enemy which is then paralyzed (must roll two dice when attempting to move. Combinations of 5 and 6 allow it to move). Lasts for 4 turns.",
+                    "damageStat":"",
+                    "damageMultiplier":2,
+                    "image":""
+                },
+                {
+                    "name":"Lightning Lvl 3",
+                    "wisdom":2,
+                    "tp":12,
+                    "range":5,
+                    "cooldown":5,
+                    "description":"Inlficts INTx3 minus 20 dmg to 1 enemy which is then paralyzed (must roll two dice when attempting to move. A roll of two 6s allows it to move). Lasts for 4 turns. ",
+                    "damageStat":"",
+                    "damageMultiplier":3,
+                    "image":""
+                },
+                {
+                    "name":"Cloud",
+                    "wisdom":2,
+                    "tp":8,
+                    "range":5,
+                    "cooldown":1,
+                    "description":"All dmg dealt by Air techniques is boosted x 1.5 for 4 turns.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Shock",
+                    "wisdom":2,
+                    "tp":8,
+                    "range":5,
+                    "cooldown":1,
+                    "description":"The Magician places a shield on one ally that causes all melee attacking enemies to receive INTx1/2 dmg when they attack the hero with the shield. Lasts for 3 turns.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Thunderstorm",
+                    "wisdom":5,
+                    "tp":20,
+                    "sp":10,
+                    "range":5,
+                    "cooldown":1,
+                    "description":"Each turn for the next 3 turns, you may deal INTx2 dmg to one enemy of your choice.  These attacks do not take one of your actions.",
+                    "damageStat":"",
+                    "damageMultiplier":3,
+                    "image":""
                 }
             ],
             [
@@ -375,6 +442,73 @@
                     "range":5,
                     "cooldown":1,
                     "description":"Inflicts INTx3 dmg on all enemies and creates a straight line through the field at any location that cannot be crossed for 3 turns. Also costs 10 SP",
+                    "damageStat":"",
+                    "damageMultiplier":3,
+                    "image":""
+                },
+                {
+                    "name":"Growth Lvl 1",
+                    "wisdom":1,
+                    "tp":3,
+                    "range":3,
+                    "cooldown":1,
+                    "description":"Boosts target hero’s STR by 7 for 5 turns.  ",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Growth Lvl 2",
+                    "wisdom":2,
+                    "tp":7,
+                    "range":4,
+                    "cooldown":3,
+                    "description":"Boosts target hero’s STR by 15 for 5 turns. ",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Growth Lvl 3",
+                    "wisdom":2,
+                    "tp":12,
+                    "range":5,
+                    "cooldown":5,
+                    "description":"Boosts target hero’s STR by 30 for 5 turns.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Awaken",
+                    "wisdom":2,
+                    "tp":8,
+                    "range":2,
+                    "cooldown":1,
+                    "description":"Summons 2 Ghasts with the following attributes: HP:30 STR:10 AGI:15, which are under the player’s control for 4 turns before they dissipate. Ghasts are summoned within 2 spaces of the Magician. ",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Poison",
+                    "wisdom":2,
+                    "tp":8,
+                    "range":5,
+                    "cooldown":1,
+                    "description":"Poisons 1 enemy, dealing 1/4 of its maxHP in dmg each turn for 3 turns. Does not work on bosses.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Nature's Blessing",
+                    "wisdom":5,
+                    "tp":20,
+                    "sp":10,
+                    "range":"Unlimited",
+                    "cooldown":1,
+                    "description":"Doubles the STR and Defense of all allies for 4 turns.",
                     "damageStat":"",
                     "damageMultiplier":3,
                     "image":""
@@ -447,6 +581,73 @@
                     "damageStat":"",
                     "damageMultiplier":5,
                     "image":""
+                },
+                {
+                    "name":"Smoke Lvl 1",
+                    "wisdom":1,
+                    "tp":3,
+                    "range":3,
+                    "cooldown":1,
+                    "description":"Lowers two enemies’ STR and AGI values by 2 each for 3 turns.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Smoke Lvl 2",
+                    "wisdom":2,
+                    "tp":7,
+                    "range":4,
+                    "cooldown":3,
+                    "description":"Lowers two enemies’ STR and AGI values by 5 each for 3 turns. ",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Smoke Lvl 3",
+                    "wisdom":2,
+                    "tp":12,
+                    "range":5,
+                    "cooldown":5,
+                    "description":"Lowers three enemies’ STR and AGI values by 11 each for 3 turns.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Brekar",
+                    "wisdom":2,
+                    "tp":6,
+                    "range":5,
+                    "cooldown":1,
+                    "description":"Move 1 non-boss enemy 5 spaces",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Fog",
+                    "wisdom":2,
+                    "tp":6,
+                    "range":5,
+                    "cooldown":1,
+                    "description":"Target non-boss enemy misses with any rolling combinations of 1, 2, 3, or 4 for 4 turns.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Haze Strike",
+                    "wisdom":5,
+                    "tp":20,
+                    "sp":10,
+                    "range":"Unlimited",
+                    "cooldown":1,
+                    "description":"Does INTx3 dmg on all enemies, halves one non-boss enemy’s STR for 3 turns or a boss's for 1 turn, and makes all affected non-boss enemies miss with a roll of any combination of 1, 2, 3, or 4 for 3 turns.",
+                    "damageStat":"",
+                    "damageMultiplier":3,
+                    "image":""
                 }
             ],
             [
@@ -513,6 +714,73 @@
                     "range":5,
                     "cooldown":1,
                     "description":"Inflicts INTx3 dmg to all enemies, then continues to deal INTx1 dmg to all enemies for 2 additional turns. Also costs 10 SP",
+                    "damageStat":"",
+                    "damageMultiplier":3,
+                    "image":""
+                },
+                {
+                    "name":"Ice Lvl 1",
+                    "wisdom":1,
+                    "tp":3,
+                    "range":3,
+                    "cooldown":1,
+                    "description":"Inflicts INTx1 minus 5 dmg to 1 enemy, and decreases its AGI by 6 for 3 turns, effects can stack.",
+                    "damageStat":"",
+                    "damageMultiplier":1,
+                    "image":""
+                },
+                {
+                    "name":"Ice Lvl 2",
+                    "wisdom":2,
+                    "tp":7,
+                    "range":4,
+                    "cooldown":3,
+                    "description":"Inflicts INTx2 minus 12 dmg to 1 enemy, and decreases its AGI by 12 for 3 turns, effects can stack.",
+                    "damageStat":"",
+                    "damageMultiplier":2,
+                    "image":""
+                },
+                {
+                    "name":"Ice Lvl 3",
+                    "wisdom":2,
+                    "tp":12,
+                    "range":5,
+                    "cooldown":5,
+                    "description":"Inflicts INTx3 minus 25 dmg to 1 enemy, and decreases its AGI by 18 for 3 turns, effects can stack.",
+                    "damageStat":"",
+                    "damageMultiplier":3,
+                    "image":""
+                },
+                {
+                    "name":"Freeze",
+                    "wisdom":2,
+                    "tp":7,
+                    "range":5,
+                    "cooldown":1,
+                    "description":"Enemy (non-boss) is frozen and unable to take action or move until it has been attacked (by either a weapon or technique) or until 3 turns have passed.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Frost Armor",
+                    "wisdom":2,
+                    "tp":8,
+                    "range":5,
+                    "cooldown":1,
+                    "description":"Doubles an ally’s defense or raises it by 2 for 4 turns, effects do not stack.",
+                    "damageStat":"",
+                    "damageMultiplier":0,
+                    "image":""
+                },
+                {
+                    "name":"Blizzard",
+                    "wisdom":5,
+                    "tp":20,
+                    "sp":10,
+                    "range":"Unlimited",
+                    "cooldown":1,
+                    "description":"Inflicts INTx3 dmg on all enemies, and freezes the surviving enemies. A frozen enemy is unable to take action until it has been attacked (by either a weapon or technique) or until 3 turns have past.",
                     "damageStat":"",
                     "damageMultiplier":3,
                     "image":""

@@ -1,10 +1,11 @@
 // Stats = [hp, tp, str, int, agi]
+// Classes = [archer, cleric, magician, warrior]
+// Races = [aven, breken, kyrek, rokoll, silmaeri]
+// Elements = [air, earth, fire, water]
 
 // 
 // Data
 // 
-
-let gameData;
 
 let playerChar = {
     "name": "",
@@ -20,31 +21,7 @@ let playerChar = {
     "stats": []
 }
 
-// Get data from JSON file.
-function getData(fileName, endFunction, charChoices) {
-    // Variable for storing returned JSON data
-    // let gameData;
-    // Get data from JSON file.
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', fileName, true);
-    xhr.responseType = 'text';
-    xhr.send();
-
-    xhr.onload = function() {
-        if(xhr.status === 200) {
-            gameData = JSON.parse(xhr.responseText);
-            // When the data is successfully loaded, execute the specified function with the data as a parameter.
-            endFunction(gameData, charChoices);
-        }
-        else {
-            console.log('XMLHttp Request status: ' + xhr.status);
-            console.log('JSON data could not be loaded')
-            return (null);
-        }
-    } // end onload
-}
-
-// Starts after data is loaded
+// Starts when data loads
 let onLoaded = function (gameData, charChoices) {
     charDataDisplay(gameData, charChoices);
 }
@@ -70,153 +47,47 @@ let charDataDisplay = function(gameData, charChoices) {
     const agiEl = document.getElementById('charAgi');
     
     // Character variables
-    let charName = charChoices[0];
-    let charClass = capitalize(charChoices[1]);
-    let race = capitalize(charChoices[2]);
-    let classIndex = getClassIndex(charChoices[1]);
-    let raceIndex = getRaceIndex(charChoices[2]);
-    let element = capitalize(charChoices[3]);
-    let elementIndex = getElementIndex(charChoices[3]);
-    let stats = getCombinedStats(gameData, classIndex, raceIndex);
-    let startWeapon = gameData.startWeapons[classIndex];
-    let charges = gameData.startChargeCount;
-    let wisdom = gameData.levels[0].wisdom;
-    let csf = getCsf(gameData, classIndex);
-    let rsf = getRsf(gameData, raceIndex);
+    const charName = charChoices[0];
+    const charClass = capitalize(charChoices[1]);
+    const race = capitalize(charChoices[2]);
+    const classIndex = getClassIndex(charChoices[1]);
+    const raceIndex = getRaceIndex(charChoices[2]);
+    const element = capitalize(charChoices[3]);
+    const elementIndex = getElementIndex(charChoices[3]);
+    const csf = getCsf(gameData, classIndex);
+    const csfName = `${csf[0]} - 10 charges`;
+    const csfDesc = csf[1];
+    const rsf = getRsf(gameData, raceIndex);
+    const rsfName = `${rsf[0]} - 5 charges`;
+    const rsfDesc = rsf[1];
+
+    // Unused vars
+    // const startWeapon = gameData.startWeapons[classIndex];
+    // const charges = gameData.startChargeCount;
+    // const wisdom = gameData.levels[0].wisdom;
+
+    // Char Stats
+    const stats = getCombinedStats(gameData, classIndex, raceIndex);
+    let maxHp, maxTp, str, int, agi;
+    [maxHp, maxTp, str, int, agi] = stats;
 
     // Display character data
-    nameEl.innerText = charName;
-    classEl.innerText = charClass;
-    raceEl.innerText = race;
-    elementEl.innerText = element;
-    csfNameEl.innerText = `${csf[0]} - 10 charges`;
-    csfDescEl.innerText = csf[1];
-    rsfNameEl.innerText = `${rsf[0]} - 5 charges`;
-    rsfDescEl.innerText = rsf[1];
-    maxHpEl.innerText = stats[0]
-    maxTpEl.innerText = stats[1]
-    strEl.innerText = stats[2]
-    intEl.innerText = stats[3]
-    agiEl.innerText = stats[4]
+    display(nameEl, charName);
+    display(classEl, charClass);
+    display(raceEl, race);
+    display(elementEl, element);
+    display(csfNameEl, csfName);
+    display(csfDescEl, csfDesc);
+    display(rsfNameEl, rsfName);
+    display(rsfDescEl, rsfDesc);
+    display(maxHpEl, maxHp);
+    display(maxTpEl, maxTp);
+    display(strEl, str);
+    display(intEl, int);
+    display(agiEl, agi);
 
     displayWeapons(gameData, classIndex);
     displayTechniques(gameData, classIndex, elementIndex)
-}
-
-// Get Class Soul Force
-
-let getCsf = function(gameData, classIndex) {
-    let name = gameData.classSoulForces[classIndex].name;
-    let desc = gameData.classSoulForces[classIndex].description;
-    let csf = [name, desc];
-    return csf;
-}
-
-// Get Race Soul Force
-
-let getRsf = function(gameData, raceIndex) {
-    let name = gameData.raceSoulForces[raceIndex].name;
-    let desc = gameData.raceSoulForces[raceIndex].description;
-    let csf = [name, desc];
-    return csf;
-}
-
-// 
-// Get Unaltered Stats
-// 
-
-let getClassStats = function(gameData, classIndex) {
-    // console.log('start get class stats')
-    // console.log(classIndex)
-    let classStats = gameData.baseStats[classIndex];
-    // console.log('finish get class stats')
-    return classStats;
-}
-let getRaceStats = function(gameData, raceIndex) {
-    let raceStats = gameData.statMods[raceIndex];
-    // console.log('finish get race stats')
-    return raceStats;
-}
-
-let getCombinedStats = function(gameData, classIndex, raceIndex) {
-    let classStats = getClassStats(gameData, classIndex);
-    let raceStats = getRaceStats(gameData, raceIndex);
-    let combinedStats = classStats.map(function (num, idx) {
-        return num + raceStats[idx];
-    });
-    return combinedStats;
-}
-
-function capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-
-
-window.addEventListener("DOMContentLoaded", function(e) {
-    let charName = localStorage.getItem("characterName");
-    let charClass = localStorage.getItem("characterClass");
-    let charRace = localStorage.getItem("characterRace");
-    let charElement = localStorage.getItem("characterElement");
-
-    let charChoices = [charName, charClass, charRace, charElement];
-    
-    console.log(charName);
-    console.log(charClass);
-    console.log(charRace);
-    console.log(charElement);
-
-    // Begins the process of requesting the JSON data.
-    getData('gameData.json', onLoaded, charChoices)
-    
-})
-
-// 
-// Get gameData Indexes
-// 
-
-// Return the class index based on class name
-let getClassIndex = function(className) {
-    switch (className) {
-        case 'archer':
-            return 0
-        case 'cleric':
-            return 1
-        case 'magician':
-            return 2
-        case 'warrior':
-            return 3
-    }
-}
-
-// Return the race index based on race name
-let getRaceIndex = function(raceName) {
-    switch (raceName) {
-        case 'aven':
-            return 0
-        case 'breken':
-            return 1
-        case 'kyrek':
-            return 2
-        case 'rokoll':
-            return 3
-        case 'silmaeri':
-            return 4
-    }
-}
-
-// Return the element index based on element name
-let getElementIndex = function(elementName) {
-    switch (elementName) {
-        case 'air':
-            return 0
-        case 'earth':
-            return 1
-        case 'fire':
-            return 2
-        case 'water':
-            return 3
-    }
 }
 
 // 
@@ -235,7 +106,7 @@ function displayWeapons(gameData, classIndex) {
     else {
         const mNameEl = document.getElementById('mWeaponName')
         const mWeaponName = gameData.startWeapons[classIndex];
-        mNameEl.innerText = mWeaponName;
+        display(mNameEl, mWeaponName)
     }
     
 }
@@ -263,7 +134,8 @@ function displayTechniques(gameData, classIndex, elementIndex) {
 
     const techTitle = document.getElementById('techTitle')
 
-    techTitle.innerHTML = `${charClass} Techniques`
+    let titleContent = `${charClass} Techniques`
+    display(techTitle, titleContent)
 
     for (i = 0; i < classTech.length; i++) {
         let tech = classTech[i]
@@ -307,13 +179,8 @@ function displayTechniques(gameData, classIndex, elementIndex) {
           </div>
         </div> <!-- End Technique Card -->
       </div> <!-- End Column -->`
-
-        
-        
-        
-        // `<p>${tech.name}. wisdom- ${tech.wisdom}. TP- ${tech.tp}. Range- ${tech.range}. ${cooldownText}${classTech[i].description}</p>`
     }
 
     // Display generated content to the modal
-    techModal.innerHTML = content;
+    display(techModal, content);
 }

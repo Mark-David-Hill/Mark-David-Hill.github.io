@@ -1,50 +1,9 @@
-// https://medium.com/@richard.jones/getting-rid-of-radar-chart-ticks-in-chartjs-dda06bef2711
-
-// Scales
-// https://www.chartjs.org/docs/latest/axes/radial/
-
-
-// Ticks
-
 // Stats = [hp, tp, str, int, agi]
 
-// 
-// Data
-// 
-
-let gameData;
-
-// Get data from JSON file.
-function getData(fileName, endFunction) {
-    // Variable for storing returned JSON data
-    // let gameData;
-    // Get data from JSON file.
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', fileName, true);
-    xhr.responseType = 'text';
-    xhr.send();
-
-    xhr.onload = function() {
-        if(xhr.status === 200) {
-            gameData = JSON.parse(xhr.responseText);
-            // When the data is successfully loaded, execute the specified function with the data as a parameter.
-            endFunction(gameData);
-        }
-        else {
-            console.log('XMLHttp Request status: ' + xhr.status);
-            console.log('JSON data could not be loaded')
-            return (null);
-        }
-    } // end onload
-}
-
-// Starts after data is loaded
+// Execute when data loads
 let onLoaded = function (gameData) {
     setChartData(gameData, checkClass(), checkRace())
 }
-
-// Begins the process of requesting the JSON data.
-getData('gameData.json', onLoaded)
 
 // 
 // Stats Chart
@@ -127,33 +86,6 @@ const myChart = new Chart(
 // Chart Data Management
 // //
 // 
-
-// 
-// Get Unaltered Stats
-// 
-
-let getClassStats = function(gameData, classIndex) {
-    // console.log('start get class stats')
-    // console.log(classIndex)
-    let classStats = gameData.baseStats[classIndex];
-    // console.log('finish get class stats')
-    return classStats;
-}
-let getRaceStats = function(gameData, raceIndex) {
-    let raceStats = gameData.statMods[raceIndex];
-    // console.log('finish get race stats')
-    return raceStats;
-}
-
-let getCombinedStats = function(gameData, classIndex, raceIndex) {
-    let classStats = getClassStats(gameData, classIndex);
-    let raceStats = getRaceStats(gameData, raceIndex);
-    let combinedStats = classStats.map(function (num, idx) {
-        return num + raceStats[idx];
-    });
-    // console.log('finished get combined stats');
-    return combinedStats;
-}
 
 // 
 // Stat High Calculation
@@ -297,36 +229,6 @@ let onRadioChoice = function() {
 // Set chart data for class + race
 // 
 
-// Return the class index based on class name
-let getClassIndex = function(className) {
-    switch (className) {
-        case 'archer':
-            return 0
-        case 'cleric':
-            return 1
-        case 'magician':
-            return 2
-        case 'warrior':
-            return 3
-    }
-}
-
-// Return the race index based on race name
-let getRaceIndex = function(raceName) {
-    switch (raceName) {
-        case 'aven':
-            return 0
-        case 'breken':
-            return 1
-        case 'kyrek':
-            return 2
-        case 'rokoll':
-            return 3
-        case 'silmaeri':
-            return 4
-    }
-}
-
 let setChartData = function(gameData, classChoice, raceChoice) {
     if (gameData) {
         if(classChoice) {
@@ -344,7 +246,6 @@ let setChartData = function(gameData, classChoice, raceChoice) {
                 updateStatsDisplay(gameData, classIndex, null);
             }
         }
-        // This is a little messy. Could stand to be refactored.
         else if(raceChoice) {
             let raceIndex = getRaceIndex(raceChoice);
             let statMods = gameData.statMods[raceIndex];
@@ -359,15 +260,6 @@ let setChartData = function(gameData, classChoice, raceChoice) {
         console.log('failed to access gameData')
     }
 }
-
-const array = [1, 2, 3, 4];
-let sum = 0;
-
-for (let i = 0; i < array.length; i++) {
-    sum += array[i];
-}
-console.log(sum);
-
 
 // Update Graph Stats
 let updateStats = function (classStats, combinedStats, raceStats) {
@@ -426,11 +318,9 @@ let updateStatsDisplay = function(gameData, classIndex, raceIndex) {
 // 
 
 // grab reference to form
-
 const formElem = document.querySelector('form');
 
 // submit handler
-
 formElem.addEventListener('submit', (e) => {
 // on form submission, prevent default
 e.preventDefault();
@@ -440,7 +330,6 @@ new FormData(formElem);
 });
 
 // formdata handler to retrieve data
-
 formElem.addEventListener('formdata', (e) => {
     console.log('formdata fired');
 
@@ -456,9 +345,7 @@ formElem.addEventListener('formdata', (e) => {
     localStorage.setItem("characterRace", characterFormData.get("raceGroup"))
     localStorage.setItem("characterElement", characterFormData.get("elementGroup"))
 
-    console.log("name");
-
+    // Change page
     const url = window.location.href.replace("character.html", "charPage.html");
     window.location.href = url;
-
 });
