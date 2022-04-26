@@ -148,8 +148,9 @@ function displayTechniques(gameData, classIndex, elementIndex) {
         }
         content += `<div class="col-12 col-lg-6 my-3">
         <!-- ${tech.name} Card -->
-        <div class="card shadow">
-          <div class="card-body py-0">
+        <div class="card shadow h-100">
+
+          <div class="card-header py-0">
             <!-- Name TP Row -->
             <div class="row tech-header">
               <div class="col">
@@ -161,11 +162,16 @@ function displayTechniques(gameData, classIndex, elementIndex) {
                 <p class="card-text text-end p-2">${tech.tp} TP</p>
               </div>
             </div>
-            <div class="row">
-              <p class="p-3">${classTech[i].description}</p>
+          </div>
+
+          <div class="card-body py-0 d-flex flex-column">
+            
+
+            <div class="row flex-grow-1">
+              <p class="p-3 align-self-center">${classTech[i].description}</p>
             </div>
             <!-- Wisdom Range Cooldown Row -->
-            <div class="row">
+            <div class="row flex-grow-2">
               <div class="col">
                 <p class="fw-normal tech-footer p-2">Wisdom: ${tech.wisdom}</p>
               </div>

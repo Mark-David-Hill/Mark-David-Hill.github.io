@@ -825,7 +825,7 @@
                 "name":"Cyclone",
                 "wisdom":3,
                 "tp":8,
-                "range":"adjacent enemies",
+                "range":"adjacent",
                 "cooldown":1,
                 "description":"Attacks all adjacent enemies (including those in diagonally adjacent spaces) for STRx1",
                 "damageBaseStat":"str",
