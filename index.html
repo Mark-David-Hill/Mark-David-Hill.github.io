@@ -1,204 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--  -->
-<!-- Head -->
-<!--  -->
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  -->
+  <!-- Head -->
+  <!--  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link to style sheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- Link to Chango Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&display=swap"
+      rel="stylesheet"
+    />
     <!-- Link to Cambo Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cambo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cambo&display=swap"
+      rel="stylesheet"
+    />
     <!-- Title -->
     <title>Mark Hill | Portfolio Home</title>
-</head>
-<!--  -->
-<!-- -- -->
-<!-- Body Start -->
-<!-- -- -->
-<!--  -->
-<body>
+  </head>
+  <!--  -->
+  <!-- -- -->
+  <!-- Body Start -->
+  <!-- -- -->
+  <!--  -->
+  <body>
     <!-- Main Grid -->
     <div id="mainGrid">
-        <!-- Header -->
-        <header>
-            <h1>Mark D. Hill</h1>
-            <h2>Front-end Developer・Saitama, Japan</h2>
-        </header>
-        <!-- Portrait Image -->
-        <div id="portrait">
-            <img src="images/portrait.png" alt="Mark Portrait" width="425" height="385">
-        </div>
+      <!-- Header -->
+      <header>
+        <h1>Mark D. Hill</h1>
+        <h2>Front-end Developer・Saitama, Japan</h2>
+      </header>
+      <!-- Portrait Image -->
+      <div id="portrait">
+        <img
+          src="images/portrait.png"
+          alt="Mark Portrait"
+          width="425"
+          height="385"
+        />
+      </div>
 
+      <!-- Nav -->
+      <nav>
+        <button id="hamburgerButton">&#9776;</button>
+        <ul id="mainNav">
+          <li class="active"><a href="#">Projects</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
 
-        <!-- Nav -->
-        <nav>
-            <!-- <div class="row limited"> -->
-            <button id="hamburgerButton">&#9776;</button>
-                <ul id="mainNav">
-                    <li class="active"><a href="#">Projects</a></li>
-                    <li><a href="about.html">About Me</a></li>
+      <!-- Main -->
+      <main>
+        <div id="mainSection">
+          <h2>Welcome!</h2>
+          <p>
+            My name is Mark Hill. I am a front-end developer living in Eagle
+            Mountain, Utah. I have been studying web development for some time,
+            including through an apprenticeship with DevPipeline, and have
+            worked on some interesting projects in that time.
+          </p>
+          <p>
+            The projects below were created by me based off of designs created
+            in Figma by my wife Krystal and I.
+          </p>
+          <p>Take a look at my work:</p>
+
+          <!--  -->
+          <!-- Projects -->
+          <!--  -->
+          <section id="projects">
+            <!-- E-commerce Site Card -->
+            <div class="project-card">
+              <img src="images/eCommerceSite.png" alt="E-commerce Site" />
+              <div>
+                <p>
+                  E-commerce site made for Frontend Capstone as part of
+                  apprenticeship with DevPipeline
+                </p>
+                <ul>
+                  <li>React</li>
+                  <li>HTML</li>
+                  <li>SCSS</li>
+                  <li>JavaScript</li>
                 </ul>
-            <!-- </div> -->
-        </nav>
-
-
-        
-        <!-- Main -->
-        <main>
-            <div id="mainSection">
-                <h2>Welcome!</h2>
-            <p>My name is Mark Hill. I am a front-end developer living in Saitama, Japan. I have been studying web development for some time and have worked on some interesting projects.</p>
-            <p>The projects below were created by me based off of designs created in Figma by my wife Krystal and I.</p>
-            <p>Take a look at my work:</p>
-            <!--  -->
-            <!-- Projects -->
-            <!--  -->
-            <section id="projects">
-
-                <!-- Type-Matchup Pokedex Site Card -->
-                <div class="project-card">
-                    <img src="images/pokedex.png" alt="Type-Matchup Pokedex">
-                    <div>
-                        <p>Type-Matchup Pokedex made to practice working with API's</p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Bootstrap</li>
-                            <li>API</li>
-                            <li>Webpack</li>
-                        </ul>
-                    </div>
-                    <div class="flex-spacing">
-                        <a href="https://type-matchup-pokedex.netlify.app/" target="blank">Site</a>
-                        <a href="https://github.com/Mark-David-Hill/Type-Matchup-Pokedex" target="blank">Code</a>
-                    </div>
-                </div> <!-- End CPA Site Project -->
-
-                <!-- CPA Site Card -->
-                <div class="project-card">
-                    <img src="images/cpaSite.png" alt="Jeff Hill CPA, LLC Site">
-                    <div>
-                        <!-- <h3>Jeff Hill CPA, LLC Website</h3> -->
-                        
-                        <p>Responsive business website for the accounting firm Jeff Hill CPA, LLC</p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Sass</li>
-                        </ul>
-                    </div>
-                    <div class="flex-spacing">
-                        <a href="https://www.jeffhillcpa.com/" target="blank">Site</a>
-                        <a href="https://github.com/Mark-David-Hill/Jeff-Hill-CPA-Website" target="blank">Code</a>
-                    </div>
-                </div> <!-- End CPA Site Project -->
-
-                <!-- EBG Site Card -->
-                <div class="project-card">
-                    <img src="images/ebgSite.png" alt="Epic Board Game Site">
-                    <div>
-                        
-                        <p>Character creator for "Epic Board Game". Collaboration with Alden Thorpe</p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>JavaScript</li>
-                            <li>JSON</li>
-                            <li>Bootstrap</li>
-                            <li>Chart.js</li>
-                        </ul>
-                    </div>
-                    <div class="flex-spacing">
-                        <a href="https://mark-david-hill.github.io/ebg/character.html" target="blank">Site</a>
-                        <a href="https://github.com/Mark-David-Hill/Mark-David-Hill.github.io/tree/main/ebg" target="blank">Code</a>
-                    </div>
-                </div> <!-- End EBG Site Card -->
-
-                <!-- Mega Man Site Card -->
-                <div class="project-card">
-                    <img src="images/mmSite.png" alt="Mega Man Site">
-                    <div>
-                        
-                        <p>Single page Mega Man site with HTML created at runtime with JavaScript</p>
-                        <ul>
-                            <li>TypeScript</li>
-                            <li>JavaScript</li>
-                            <li>Bootstrap</li>
-                            <li>JSON</li>
-                        </ul>
-                    </div>
-                    <div class="flex-spacing">
-                        <a href="https://mark-david-hill.github.io/mm/megaman.html" target="blank">Site</a>
-                        <a href="https://github.com/Mark-David-Hill/megaman-ts" target="blank">Code</a>
-                        <!-- old JS version of project -->
-                        <!-- <a href="https://github.com/Mark-David-Hill/Mark-David-Hill.github.io/tree/main/mm" target="blank">Code</a> -->
-                    </div>
-                </div> <!-- End Mega Man Site Card -->
-
-                
-
-                <!-- Currency Counter Site Card -->
-                <div class="project-card">
-                    <img src="images/counterSite.png" alt="Jeff Hill CPA, LLC Site">
-                    <div>
-                        
-                        <p>Counter for calculating the value of currency</p>
-                        <ul>
-                            <li>JavaScript</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Flexbox</li>
-                        </ul>
-                    </div>
-                    <div class="flex-spacing">
-                        <a href="https://mark-david-hill.github.io/ctr/counter.html" target="blank">Site</a>
-                        <a href="https://github.com/Mark-David-Hill/Mark-David-Hill.github.io/tree/main/ctr" target="blank">Code</a>
-                    </div>
-                </div> <!-- End Currency Counter Site Card -->
-
-                <!-- Portfolio Site Card -->
-                <div class="project-card">
-                    <img src="images/portfolioSite.png" alt="Jeff Hill CPA, LLC Site">
-                    <div>
-                        
-                        <p>The Portfolio site you're on right now</p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>CSS Grid</li>
-                            <li>Flexbox</li>
-                        </ul>
-                    </div>
-                    <div class="flex-spacing">
-                        <a href="https://mark-david-hill.github.io/" target="blank">Site</a>
-                        <a href="https://github.com/Mark-David-Hill/Mark-David-Hill.github.io" target="blank">Code</a>
-                    </div>
-                </div> <!-- End Portfolio Site Project -->
-                
-            </section> <!-- End of Projects -->
+              </div>
+              <div class="flex-spacing">
+                <a
+                  href="https://e-commerce-mark-david-hills-projects.vercel.app/"
+                  target="blank"
+                  >Site</a
+                >
+                <a
+                  href="https://github.com/Mark-David-Hill/e-commerce"
+                  target="blank"
+                  >Code</a
+                >
+              </div>
             </div>
-            
-        </main>
+            <!-- End E-commerce Site Card -->
 
-        <!-- Footer -->
-        <footer>
-            <p>Copyright © 2023 • Mark D. Hill</p>
-        </footer>
+            <!-- Type-Matchup Pokedex Site Card -->
+            <div class="project-card">
+              <img src="images/pokedex.png" alt="Type-Matchup Pokedex" />
+              <div>
+                <p>Type-Matchup Pokedex made to practice working with API's</p>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Bootstrap</li>
+                  <li>API</li>
+                  <li>Webpack</li>
+                </ul>
+              </div>
+              <div class="flex-spacing">
+                <a
+                  href="https://type-matchup-pokedex.netlify.app/"
+                  target="blank"
+                  >Site</a
+                >
+                <a
+                  href="https://github.com/Mark-David-Hill/Type-Matchup-Pokedex"
+                  target="blank"
+                  >Code</a
+                >
+              </div>
+            </div>
+            <!-- End Pokedex Site Card -->
+
+            <!-- CPA Site Card -->
+            <div class="project-card">
+              <img src="images/cpaSite.png" alt="Jeff Hill CPA, LLC Site" />
+              <div>
+                <!-- <h3>Jeff Hill CPA, LLC Website</h3> -->
+
+                <p>
+                  Responsive business website for the accounting firm Jeff Hill
+                  CPA, LLC
+                </p>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>SCSS</li>
+                </ul>
+              </div>
+              <div class="flex-spacing">
+                <a href="https://www.jeffhillcpa.com/" target="blank">Site</a>
+                <a
+                  href="https://github.com/Mark-David-Hill/Jeff-Hill-CPA-Website"
+                  target="blank"
+                  >Code</a
+                >
+              </div>
+            </div>
+            <!-- End CPA Site Card -->
+
+            <!-- EBG Site Card -->
+            <div class="project-card">
+              <img src="images/ebgSite.png" alt="Epic Board Game Site" />
+              <div>
+                <p>
+                  Character creator for "Epic Board Game". Collaboration with
+                  Alden Thorpe
+                </p>
+                <ul>
+                  <li>HTML</li>
+                  <li>JavaScript</li>
+                  <li>JSON</li>
+                  <li>Bootstrap</li>
+                  <li>Chart.js</li>
+                </ul>
+              </div>
+              <div class="flex-spacing">
+                <a
+                  href="https://mark-david-hill.github.io/ebg/character.html"
+                  target="blank"
+                  >Site</a
+                >
+                <a
+                  href="https://github.com/Mark-David-Hill/Mark-David-Hill.github.io/tree/main/ebg"
+                  target="blank"
+                  >Code</a
+                >
+              </div>
+            </div>
+            <!-- End EBG Site Card -->
+
+            <!-- Mega Man Site Card -->
+            <div class="project-card">
+              <img src="images/mmSite.png" alt="Mega Man Site" />
+              <div>
+                <p>
+                  Single page Mega Man site with HTML created at runtime with
+                  JavaScript
+                </p>
+                <ul>
+                  <li>JavaScript</li>
+                  <li>Bootstrap</li>
+                  <li>JSON</li>
+                </ul>
+              </div>
+              <div class="flex-spacing">
+                <a
+                  href="https://mark-david-hill.github.io/mm/megaman.html"
+                  target="blank"
+                  >Site</a
+                >
+                <a
+                  href="https://github.com/Mark-David-Hill/Mark-David-Hill.github.io/tree/main/mm"
+                  target="blank"
+                  >Code</a
+                >
+              </div>
+            </div>
+            <!-- End Mega Man Site Card -->
+
+            <!-- Portfolio Site Card -->
+            <div class="project-card">
+              <img
+                src="images/portfolioSite.png"
+                alt="Jeff Hill CPA, LLC Site"
+              />
+              <div>
+                <p>The Portfolio site you're on right now</p>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>CSS Grid</li>
+                  <li>Flexbox</li>
+                </ul>
+              </div>
+              <div class="flex-spacing">
+                <a href="https://mark-david-hill.github.io/" target="blank"
+                  >Site</a
+                >
+                <a
+                  href="https://github.com/Mark-David-Hill/Mark-David-Hill.github.io"
+                  target="blank"
+                  >Code</a
+                >
+              </div>
+            </div>
+            <!-- End Portfolio Site Project -->
+          </section>
+          <!-- End of Projects -->
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>Copyright © 2024 • Mark D. Hill</p>
+      </footer>
+      <!--  -->
+    </div>
+    <!-- Main Grid End -->
     <!--  -->
-    </div> <!-- Main Grid End -->
-    <!--  -->
-    
+
     <!-- Menu Toggle Script -->
     <script src="./js/menuToggle.JS"></script>
     <!-- <script src="js/portfolio.js"></script> -->
-</body>
+  </body>
 </html>

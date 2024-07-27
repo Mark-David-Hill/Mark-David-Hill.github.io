@@ -1,86 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--  -->
-<!-- Head -->
-<!--  -->
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  -->
+  <!-- Head -->
+  <!--  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link to style sheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- Link to Chango Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&display=swap"
+      rel="stylesheet"
+    />
     <!-- Link to Cambo Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cambo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cambo&display=swap"
+      rel="stylesheet"
+    />
     <!-- Title -->
-    <title>Mark Hill | Portfolio | About Me
-    </title>
-</head>
-<!--  -->
-<!-- -- -->
-<!-- Body Start -->
-<!-- -- -->
-<!--  -->
-<body>
+    <title>Mark Hill | Portfolio | About Me</title>
+  </head>
+  <!--  -->
+  <!-- -- -->
+  <!-- Body Start -->
+  <!-- -- -->
+  <!--  -->
+  <body>
     <!-- Main Grid -->
     <div id="mainGrid">
-        <!-- Header -->
-        <header>
-            <h1>Mark D. Hill</h1>
-            <h2>Front-end Developer・Saitama, Japan</h2>
-        </header>
-        <!-- Portrait Image -->
-        <div id="portrait">
-            <img src="images/portrait.png" alt="Mark Portrait" width="425" height="385">
+      <!-- Header -->
+      <header>
+        <h1>Mark D. Hill</h1>
+        <h2>Front-end Developer・Saitama, Japan</h2>
+      </header>
+      <!-- Portrait Image -->
+      <div id="portrait">
+        <img
+          src="images/portrait.png"
+          alt="Mark Portrait"
+          width="425"
+          height="385"
+        />
+      </div>
+
+      <!-- Nav -->
+      <nav>
+        <!-- <div class="row limited"> -->
+        <button id="hamburgerButton">&#9776;</button>
+        <ul id="mainNav">
+          <li><a href="./index.html">Projects</a></li>
+          <li class="active"><a href="#">About Me</a></li>
+        </ul>
+        <!-- </div> -->
+      </nav>
+
+      <!-- Main -->
+      <main>
+        <div id="mainSection">
+          <h2>Who I Am</h2>
+          <h3>About Me</h3>
+          <p>Hi, I'm Mark Hill.</p>
+          <p>
+            I have experience in a variety of fields, but currently am studying
+            and working as a <strong>full-stack web developer</strong> as an
+            apprentice at DevPipeline.
+          </p>
+          <p>
+            I am a native English speaker but can also speak conversational
+            Spanish, Chinese, and Japanese.
+          </p>
+          <h3>My Interests</h3>
+          <p>
+            I am interested in a lot of different things, including nature,
+            travel, language, culture, religion, game design, books, health,
+            education, etc.
+          </p>
+          <p>
+            In the past I have worked in localization and game development, but
+            am now excited at the many possible applications of web development.
+          </p>
+          <p>
+            My wife can attest to my passion for programming. She has stopped me
+            to ask if we can talk about anything other than web development many
+            times!
+          </p>
+          <h3>What I'm Learning</h3>
+          <p>
+            I have been studying
+            <strong>HTML, CSS, JavaScript, React, and Python</strong>, and have
+            been putting them to good use making projects for myself and others.
+          </p>
+          <p>
+            Beyond those languages I have been learning technologies such as
+            <strong
+              >Sass/SCSS, Flexbox, CSS Grid, Git and GitHub, Bootstrap, JSON,
+              working with API's, Webpack, etc.</strong
+            >
+          </p>
+          <h3>Where I Want to Go Next</h3>
+          <p>
+            In the near future I plan to finish my classes with DevPipeline and
+            look for interesting job opportunities.
+          </p>
         </div>
+      </main>
 
-
-        <!-- Nav -->
-        <nav>
-            <!-- <div class="row limited"> -->
-            <button id="hamburgerButton">&#9776;</button>
-                <ul id="mainNav">
-                    <li><a href="./index.html">Projects</a></li>
-                    <li class="active"><a href="#">About Me</a></li>
-                </ul>
-            <!-- </div> -->
-        </nav>
-
-
-        
-        <!-- Main -->
-        <main>
-            <div id="mainSection">
-                <h2>Who I Am</h2>
-                <h3>About Me</h3>
-                <p>Hi, I'm Mark Hill. </p>
-                <p>I have experience in a variety of fields, but currently am working as a freelance <strong>front-end web developer</strong>. </p>
-                <p>I am a native English speaker but can also speak conversational Spanish, Chinese, and Japanese.</p>
-                <h3>My Interests</h3>
-                <p>I am interested in a lot of different things, including nature, travel, language, culture, religion, game design, books, health, education, etc.</p> <p>In the past I have worked in localization and game development, but am now excited at the many possible applications of web development.</p> <p>My wife can attest to my passion for programming. She has stopped me to ask if we can talk about anything other than web development many times!</p>
-                <h3>What I'm Learning</h3>
-                <p>I have been studying <strong>HTML, CSS, JavaScript, and TypeScript</strong>, and have been putting them to good use making projects for myself and others.</p> <p>Beyond those basics I have been learning technologies such as <strong>Sass/SCSS, Flexbox, CSS Grid, Git and GitHub, Bootstrap, JSON, working with API's, Webpack, etc.</strong></p> <p>Though I prefer the front-end I've even dipped my toes in the back-end in order to launch a website for a small CPA Firm.</p>
-                <h3>Where I Want to Go Next</h3>
-                <p>In the near future I plan to continue to learn more about web development and sharpen my skills, make more projects, and eventually move out of freelance work and find a company to work for full-time.</p>
-            
-            </div>
-            
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>Copyright © 2023 • Mark D. Hill</p>
-        </footer>
+      <!-- Footer -->
+      <footer>
+        <p>Copyright © 2024 • Mark D. Hill</p>
+      </footer>
+      <!--  -->
+    </div>
+    <!-- Main Grid End -->
     <!--  -->
-    </div> <!-- Main Grid End -->
-    <!--  -->
-    
+
     <!-- Menu Toggle Script -->
     <script src="./js/menuToggle.JS"></script>
-</body>
+  </body>
 </html>
